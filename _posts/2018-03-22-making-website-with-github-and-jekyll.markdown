@@ -1,13 +1,11 @@
 ---
 layout: post
-title:  "Making a Website with Github and Jekyll"
+title:  "Making a Website with GitHub and Jekyll"
 date:   2018-03-22 00:00:00 -0500
 categories: jekyll github documentation
 ---
 
-This is the first post on this website, which I'm creating with [Jekyll][1]. I used [Squarespace][2] for a past month to host my portfolio, but I wanted the experience of creating my own website, so I chose to make this homepage with Jekyll. Pros of using Jekyll is that it's free and highly customizable. If you happen to stumble upon this post, I hope you find what I'm putting here useful in any way.
-
-I'm not so experienced in front-end development, so the website looks quite bare as of now, but hopefully it'll get better as I learn more and add contents.
+This is the first post on this website, which I'm creating with [Jekyll][1]. I used [Squarespace][2] for a past month to host my portfolio, but I wanted the experience of creating my website from scratch, so I chose to make this homepage with Jekyll. Pros of using Jekyll is that it's free and highly customizable. If you happen to stumble upon this post, I hope you find what I'm putting here useful in any way.
 
 Now here are steps I took.
 ### **Step 1. Create a new GitHub repository**
@@ -38,8 +36,8 @@ $ jekyll new <directory>
 ```
 The new Jekyll site created with `jekyll new` command will have [Minima][12] as it's default theme.
 
-### **Step 4. Add created files and folders to Github**
-Upload created Jekyll site to Github to control for versions as shown below:
+### **Step 4. Add created files and folders to GitHub**
+Upload created Jekyll site to GitHub to control for versions as shown below:
 ```bash
 # initiate a github repo in a directory for your jekyll site, if you haven't done so already
 $ git init
@@ -62,14 +60,14 @@ To customize your website, you need to copy files and folders those are automati
 * `/_includes`
 * and `/_sass`.
 
-You can find these folders with typing `open $(bundle show minima)` on terminal. Copy original folders to your site directory. After you've copied the folders, delete `theme: minima` from `_config.yml`. Then add `- jekyll-seo-tag` under plugins.
+You can find these folders with typing `open $(bundle show minima)` on a terminal. Copy original folders to your site directory. After you've copied the folders, delete `theme: minima` from `_config.yml`. Then add `- jekyll-seo-tag` under plugins.
 
 Now you should be able to play around with files and make changes to the website as you wish. I'm stopping here for now, but I'll add more to this post or create a new post on customizing later.
 
 ### References
 Here are some resources I used as I was creating this website.
 
-* [A beginner's guide to setting up a development environment on Mac OS X][3]: It might be off-topic, but I found this document useful for setting up a dev environment. Thanks to [`nicolashery`][4] for putting these together. However, as some parts of this document were outdated, I didn't follow everything on the document.
+* [A beginner's guide to setting up a development environment on Mac OS X][3]: It might be off-topic, but I found this document useful for setting up a dev environment. Thanks to [`nicolashery`][4] for putting these together. However, as some parts of this document were outdated, I didn't follow everything in the document.
 * [Make a Static Website with Jekyll][5]: A great guide by [Tania][6].
 * [Organizing Jekyll Pages][13]: A blog post by [Damon Bauer][14] on how to add pages to Jekyll website and organize them under a subdirectory.
 
