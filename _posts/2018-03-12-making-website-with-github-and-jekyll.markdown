@@ -43,7 +43,18 @@ $ jekyll new <directory>
 ```
 
 #### **Step 4. Add created files and folders to Github**
-Add created Jekyll site to Github to control for versions.
+Add created Jekyll site to Github to control for versions as shown below:
+```bash
+# in a directory where your jekyll site is placed, if git isn't already initiated
+$ git init
+
+# stage changed files to be committed
+$ git add .
+
+# commit changes and push origin to master
+$ git commit -m 'message'
+$ git push -u origin master
+```
 
 
 [1]: https://jekyllrb.com/

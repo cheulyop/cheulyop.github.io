@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  border-top: 5px solid $link-color;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
@@ -20,7 +20,7 @@
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: $grey-color;
   }
 }
 
@@ -37,7 +37,7 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $emph-color;
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
@@ -46,7 +46,7 @@
     }
   }
 
-  @include media-query($on-palm) {
+/*  @include media-query($on-palm) {
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
@@ -97,7 +97,7 @@
       }
       margin-left: 20px;
     }
-  }
+  }*/
 }
 
 
@@ -181,10 +181,12 @@
 
 .page-heading {
   @include relative-font-size(2);
+  color: $title-color;
 }
 
 .post-list-heading {
   @include relative-font-size(1.75);
+  color: $title-color;
 }
 
 .post-list {
@@ -203,6 +205,7 @@
 
 .post-link {
   display: block;
+  color: $link-color;
   @include relative-font-size(1.5);
 }
 
@@ -219,6 +222,7 @@
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
+  color: $title-color;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
