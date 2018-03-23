@@ -26,5 +26,14 @@ Finally, I set up https for my domain. It could be done by going to the Crypto t
 
 After these steps, I could get my custom domain to point to my Jekyll website hosted by Github.
 
+### References
+[[1]][1] Install Jekyll on macOS - desiredpersona
+
+[[2]][3] Using HTTPs with Custom Domain Name on GitHub Pages - Jonathan Petitcolas
+
+[[3]][4] Secure and fast GitHub Pages with CloudFlare - CloudFlare Blog
+
 [1]: https://desiredpersona.com/install-jekyll-on-macos/
 [2]: https://www.cloudflare.com/
+[3]: https://www.jonathan-petitcolas.com/2017/01/13/using-https-with-custom-domain-name-on-github-pages.html
+[4]: https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/
