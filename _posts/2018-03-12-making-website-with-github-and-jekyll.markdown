@@ -1,24 +1,19 @@
 ---
 layout: post
 title:  "Making a Website with Github and Jekyll"
-date:   2018-03-12 17:13:00 -0500
+date:   2018-03-22 00:00:00 -0500
 categories: jekyll github documentation
 ---
 
-This is the first post on this website, which I'm creating with [Jekyll][1]. I used [Squarespace][2] for a past month to host my portfolio and found it fairly convenient and usable, but I still wanted the experience of creating my own website, so I chose to make this homepage.
+This is the first post on this website, which I'm creating with [Jekyll][1]. I used [Squarespace][2] for a past month to host my portfolio, but I wanted the experience of creating my own website, so I chose to make this homepage with Jekyll. Pros of using Jekyll is that it's free and highly customizable. If you happen to stumble upon this post, I hope you find what I'm putting here useful in any way.
 
-I don't have much knowledge in front-end development so the website looks quite bare as of now, but hopefully it'll get better as I learn more Jekyll and all.
+I'm not so experienced in front-end development, so the website looks quite bare as of now, but hopefully it'll get better as I learn more and add contents.
 
-If you happen to stumble upon this post, I hope some scribbles I'm putting here help you somehow. I'll start with listing resources I referred to as I was building this thing.
-
-* [**A beginner's guide to setting up a development environment on Mac OS X**][3]: I found this document useful for setting up a dev environment. Thanks to [```nicolashery```][4] for putting these together. However, I didn't follow everything on the document, as some parts of this document were outdated.
-* [**Make a Static Website with Jekyll**][4]: A great guide put together by [Tania][6]. Thanks to her.
-
-Now here are steps I took to create this website. Steps aren't thorough but should be okay enough to give an idea.
-#### **Step 1. Create a new GitHub repository**
+Now here are steps I took.
+### **Step 1. Create a new GitHub repository**
 The first step is to create a new GitHub repo for the website. Follow this [documentation][7] provided by GitHub to do so.
 
-#### **Step 2. Make sure Jekyll's requirements are met**
+### **Step 2. Make sure Jekyll's requirements are met**
 Jekyll needs [Ruby][9] and [RubyGems][10]. Getting [RVM][11] should take care of both. To install RVM, run this command on a terminal:
 ```bash
 $ \curl -sSL https://get.rvm.io | bash -s stable
@@ -32,8 +27,8 @@ $ which gem
 $ gem update
 ```
 
-#### **Step 3. Install Jekyll and create a project**
-Installing Jekyll and creating a new project is explained in [Jekyll documentation][8]. Or simply use below commands:
+### **Step 3. Install Jekyll and create a project**
+Installing Jekyll and creating a new project is explained in [Jekyll documentation][8]. Or simply use commands below:
 ```bash
 # install Jekyll and Bundler gems
 $ gem install jekyll bundler
@@ -41,21 +36,42 @@ $ gem install jekyll bundler
 # create a new jekyll site at ./<directory>
 $ jekyll new <directory>
 ```
+The new Jekyll site created with `jekyll new` command will have [Minima][12] as it's default theme.
 
-#### **Step 4. Add created files and folders to Github**
-Add created Jekyll site to Github to control for versions as shown below:
+### **Step 4. Add created files and folders to Github**
+Upload created Jekyll site to Github to control for versions as shown below:
 ```bash
-# in a directory where your jekyll site is placed, if git isn't already initiated
+# initiate a github repo in a directory for your jekyll site, if you haven't done so already
 $ git init
 
-# stage changed files to be committed
+# stage all changed files
 $ git add .
 
-# commit changes and push origin to master
+# commit changes with a message and push them
 $ git commit -m 'message'
 $ git push -u origin master
 ```
+Now the website should show up at `https://<username>.github.io`.
 
+#### Steps below this point are about customizing the website.
+
+### **Step 5. Customize the website**
+To customize your website, you need to copy files and folders those are automatically managed by the theme gem. For the Minima theme gem, they are:
+* `/assets`
+* `/_layouts`
+* `/_includes`
+* and `/_sass`.
+
+You can find these folders with typing `open $(bundle show minima)` on terminal. Copy original folders to your site directory. After you've copied the folders, delete `theme: minima` from `_config.yml`. Then add `- jekyll-seo-tag` under plugins.
+
+Now you should be able to play around with files and make changes to the website as you wish. I'm stopping here for now, but I'll add more to this post or create a new post on customizing later.
+
+### References
+Here are some resources I used as I was creating this website.
+
+* [A beginner's guide to setting up a development environment on Mac OS X][3]: It might be off-topic, but I found this document useful for setting up a dev environment. Thanks to [`nicolashery`][4] for putting these together. However, as some parts of this document were outdated, I didn't follow everything on the document.
+* [Make a Static Website with Jekyll][5]: A great guide by [Tania][6].
+* [Organizing Jekyll Pages][13]: A blog post by [Damon Bauer][14] on how to add pages to Jekyll website and organize them under a subdirectory.
 
 [1]: https://jekyllrb.com/
 [2]: https://www.squarespace.com/
@@ -68,3 +84,6 @@ $ git push -u origin master
 [9]: https://www.ruby-lang.org/en/downloads/
 [10]: https://rubygems.org/pages/download
 [11]: https://rvm.io/
+[12]: https://github.com/jekyll/minima
+[13]: http://damonbauer.me/organizing-jekyll-pages/
+[14]: http://damonbauer.me/

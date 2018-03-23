@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Home
+title: Cheul Young Park
 ---
-# Who am I?
+# ?
 
-Hi, I am Cheul Young Park, and this is my homepage. Welcome!
+Hello, I am Cheul Young Park. I'm a research associate at CMU's Human-Computer Interaction Institute and this is my personal website. Welcome!
