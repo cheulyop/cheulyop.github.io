@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Setting Up a Custom Domain for GitHub Pages with Google Domains"
+title:  "Setting Up a Custom Domain for GitHub Pages (with Google Domains)"
 date: 2018-03-23 00:00:00 -0500
 categories: jekyll github documentation
 ---
 
 ### Getting started
-Setting up a custom domain for GitHub pages turned out to be more complicated than I thought. GitHub lets you use custom domains, but only without https. I have a domain I got from Google Domains, but simply setting it on GitHub doesn't show anything but the message that the site can't be reached. To get around this problem, I did some searches and found that [CloudFlare][2] lets you use custom domains with GitHub.
+Setting up a custom domain for GitHub pages turned out to be more complicated than I thought. GitHub lets you use custom domains, but only without HTTPS. Simply setting a custom domain (which I got from Google Domains) on GitHub doesn't show anything but the message that the site can't be reached. To get around this problem, I did some searches and found that [CloudFlare][2] lets you use custom domains with GitHub.
 
 ### Migrating DNS to CloudFlare
 After setting up a CloudFlare account and entering my custom domain `cheulyoung.com`, I added CloudFlare nameservers to Google Domains as shown in the screenshot below:
@@ -27,11 +27,11 @@ Finally, I set up https for my domain. It could be done by going to the Crypto t
 After these steps, I could get my custom domain to point to my Jekyll website hosted by GitHub.
 
 ### References
-[[1]][1] Install Jekyll on macOS - desiredpersona
+[1] [Install Jekyll on macOS - desiredpersona][1]
 
-[[2]][3] Using HTTPs with Custom Domain Name on GitHub Pages - Jonathan Petitcolas
+[2] [Using HTTPs with Custom Domain Name on GitHub Pages - Jonathan Petitcolas][3]
 
-[[3]][4] Secure and fast GitHub Pages with CloudFlare - CloudFlare Blog
+[3] [Secure and fast GitHub Pages with CloudFlare - CloudFlare Blog][4]
 
 [1]: https://desiredpersona.com/install-jekyll-on-macos/
 [2]: https://www.cloudflare.com/
