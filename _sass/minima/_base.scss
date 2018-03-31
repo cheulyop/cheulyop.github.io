@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -82,8 +80,26 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  /*font-weight: $base-font-weight;*/
   color: $emph-color;
+}
+
+
+
+/*
+ * Set new colors for italicized
+ */
+em {
+  color: $grey-color;
+}
+
+
+
+/*
+ * Set new colors for bold
+ */
+strong {
+  color: $title-color;
 }
 
 
@@ -138,9 +154,9 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  /*border: 1px solid $grey-color-light;*/
+  border: 1px solid #002b36;
   border-radius: 3px;
-  background-color: #eee8d5;
+  background-color: #002b36;
 }
 
 code {
@@ -166,6 +182,23 @@ pre {
 .wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
+}
+
+.wrapper-jupyter {
+  /*max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));*/
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
@@ -217,7 +250,34 @@ pre {
 /**
  * Tables
  */
+
 table {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+      table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+margin-bottom: 0; }
+
+/*table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
@@ -241,3 +301,4 @@ table {
     border: 1px solid $grey-color-light;
   }
 }
+*/

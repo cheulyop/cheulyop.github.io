@@ -2,16 +2,16 @@
 layout: post
 title:  "Making a Website with GitHub and Jekyll"
 date:   2018-03-22 00:00:00 -0500
-categories: jekyll github documentation
+categories: [blog]
 ---
 
 This is the first post on this website, which I'm creating with [Jekyll][1]. I used [Squarespace][2] for a past month to host my portfolio, but I wanted the experience of creating my website from scratch, so I chose to make this homepage with Jekyll. Pros of using Jekyll is that it's free and highly customizable. If you happen to stumble upon this post, I hope you find what I'm putting here useful in any way.
 
 Now here are steps I took.
-### **Step 1. Create a new GitHub repository**
+### Step 1. Create a new GitHub repository
 The first step is to create a new GitHub repo for the website. Follow this [documentation][7] provided by GitHub to do so.
 
-### **Step 2. Make sure Jekyll's requirements are met**
+### Step 2. Make sure Jekyll's requirements are met
 Jekyll needs [Ruby][9] and [RubyGems][10]. Getting [RVM][11] should take care of both. To install RVM, run this command on a terminal:
 ```bash
 $ \curl -sSL https://get.rvm.io | bash -s stable
@@ -25,7 +25,7 @@ $ which gem
 $ gem update
 ```
 
-### **Step 3. Install Jekyll and create a project**
+### Step 3. Install Jekyll and create a project
 Installing Jekyll and creating a new project is explained in [Jekyll documentation][8]. Or simply use commands below:
 ```bash
 # install Jekyll and Bundler gems
@@ -36,7 +36,7 @@ $ jekyll new <directory>
 ```
 The new Jekyll site created with `jekyll new` command will have [Minima][12] as it's default theme.
 
-### **Step 4. Add created files and folders to GitHub**
+### Step 4. Add created files and folders to GitHub
 Upload created Jekyll site to GitHub to control for versions as shown below:
 ```bash
 # initiate a github repo in a directory for your jekyll site, if you haven't done so already
@@ -51,9 +51,9 @@ $ git push -u origin master
 ```
 Now the website should show up at `https://<username>.github.io`.
 
-#### Steps below this point are about customizing the website.
+*Steps below this point are for customizing the website.*
 
-### **Step 5. Customize the website**
+### Step 5. Customize the website
 To customize your website, you need to copy files and folders those are automatically managed by the theme gem. For the Minima theme gem, they are:
 * `/assets`
 * `/_layouts`
