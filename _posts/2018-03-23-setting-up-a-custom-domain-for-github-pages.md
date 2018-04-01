@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setting Up a Custom Domain for GitHub Pages (with Google Domains)"
-date: 2018-03-23 00:00:00 -0500
+date: 2018-03-23 00:00:00 -0400
 categories: [blog]
 ---
 

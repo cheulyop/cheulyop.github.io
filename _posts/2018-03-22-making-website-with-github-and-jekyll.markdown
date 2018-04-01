@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Making a Website with GitHub and Jekyll"
-date:   2018-03-22 00:00:00 -0500
+date:   2018-03-22 00:00:00 -0400
 categories: [blog]
 ---
 

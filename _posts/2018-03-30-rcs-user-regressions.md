@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Looking into Couples' Account Sharing with Python"
-date: 2018-03-30 00:00:00 -0500
-updated: 2018-04-01 00:00:00 -0500
+date: 2018-03-30 00:00:00 -0400
+updated: 2018-04-01 00:00:00 -0400
 categories: [project]
 ---
 
