@@ -25,10 +25,9 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-jupyter-notebook
 
 include: ["_pages"]
-permalink: /:title/
+permalink: pretty
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

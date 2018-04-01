@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Sharing of Online Accounts Among Couples"
-date: 2018-03-29 00:00:00 -0500
+title:  "Looking into Couples' Account Sharing with Python"
+date: 2018-03-30 00:00:00 -0500
+updated: 2018-04-01 00:00:00 -0500
 categories: [project]
 ---
 
-I've been working with survey responses collected from Amazon Mechanical Turk for past few months to study the behavior of sharing online accounts among couples. Here are some codes I wrote in the process.
+I've been working with [survey](http://cmu.ca1.qualtrics.com/jfe/form/SV_beZL6a2GYEOjgwt) responses collected from Amazon Mechanical Turk for past few months to study how couples share online accounts. My main focus was to look into what variables—including age, gender, relationship status, income, and education—are related to the higher ratio of sharing, which was calculated as the number of shared accounts divided by the number of total accounts owned. In this process, I broke variables down across their medians, then conducted hypothesis tests and regression, both linear and logistic. As the result, I found some interesting relationships between sharing and different variables, independently and combined. Below are Python codes I wrote to work with data, mostly numerical in this case.
 
 ## Data Preparation
 
@@ -39,8 +40,11 @@ sb.set_palette('colorblind', color_codes=True)
 pd.options.display.max_rows = 4000
 ```
 
+    /Users/cheul/science/lib/python3.6/site-packages/statsmodels/compat/pandas.py:56: FutureWarning: The pandas.core.datetools module is deprecated and will be removed in a future version. Please use the pandas.tseries module instead.
+      from pandas.core import datetools
 
-### 2. Define some helper functions
+
+### 2. Helper functions
 
 
 ```python
@@ -112,7 +116,7 @@ def standardize(data, variable):
     data['std_%s'%variable] = (data[variable]-mean)/stdev
 ```
 
-### 3. Prepare a dataframe for users from the raw file
+### 3. Data
 
 
 ```python
@@ -123,7 +127,132 @@ drops = ['Unnamed: 0', 'mTurkCode', 'surveyDuration',
          'securityDiscussion', 'emergencyDiscussion', 'numAccs1', 'numAccs2',
          'numAccs3', 'numAccs4', 'numAccs5']
 users = users.drop(drops, axis=1)
+```
 
+
+```python
+print(users.shape)
+users.head()
+```
+
+    (195, 11)
+
+
+
+
+
+<div style="overflow-x: auto; margin-bottom: 15px;">
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>relStatus</th>
+      <th>relDuration</th>
+      <th>cohabStatus</th>
+      <th>cohabDuration</th>
+      <th>selfAge</th>
+      <th>partnerAge</th>
+      <th>selfGender</th>
+      <th>income</th>
+      <th>education</th>
+      <th>numShared</th>
+      <th>numAccsAll</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>120</td>
+      <td>1</td>
+      <td>60</td>
+      <td>29</td>
+      <td>29</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>54</td>
+      <td>1</td>
+      <td>32</td>
+      <td>34</td>
+      <td>33</td>
+      <td>2</td>
+      <td>6</td>
+      <td>5</td>
+      <td>6</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>38</td>
+      <td>1</td>
+      <td>2</td>
+      <td>22</td>
+      <td>24</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>26</td>
+      <td>1</td>
+      <td>16</td>
+      <td>29</td>
+      <td>28</td>
+      <td>1</td>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>6</td>
+      <td>2</td>
+      <td>0</td>
+      <td>32</td>
+      <td>35</td>
+      <td>2</td>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+### 4. Prepare a dataframe for users
+
+
+```python
 # get the ratio of sharing
 users['shareRatio'] = users['numShared']/users['numAccsAll']
 # make a new predictor that combines relationship and cohabitation duration
@@ -152,6 +281,144 @@ users['female'] = np.where(users['female'] == 1, 1, 0)
 users_copy = copy.deepcopy(users)
 ```
 
+
+```python
+print(users.shape)
+users.head()
+```
+
+    (182, 14)
+
+
+
+
+
+<div style="overflow-x: auto; margin-bottom: 15px;">
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>married</th>
+      <th>relDuration</th>
+      <th>cohabiting</th>
+      <th>cohabDuration</th>
+      <th>selfAge</th>
+      <th>partnerAge</th>
+      <th>female</th>
+      <th>income</th>
+      <th>education</th>
+      <th>numShared</th>
+      <th>numAccsAll</th>
+      <th>shareRatio</th>
+      <th>combinedDuration</th>
+      <th>ageDifference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>120</td>
+      <td>1</td>
+      <td>60</td>
+      <td>29</td>
+      <td>29</td>
+      <td>0</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>12</td>
+      <td>0.416667</td>
+      <td>150.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>54</td>
+      <td>1</td>
+      <td>32</td>
+      <td>34</td>
+      <td>33</td>
+      <td>0</td>
+      <td>6</td>
+      <td>5</td>
+      <td>6</td>
+      <td>30</td>
+      <td>0.200000</td>
+      <td>70.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>38</td>
+      <td>1</td>
+      <td>2</td>
+      <td>22</td>
+      <td>24</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>18</td>
+      <td>0.111111</td>
+      <td>39.0</td>
+      <td>-2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>26</td>
+      <td>1</td>
+      <td>16</td>
+      <td>29</td>
+      <td>28</td>
+      <td>1</td>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>4</td>
+      <td>0.250000</td>
+      <td>34.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>32</td>
+      <td>35</td>
+      <td>0</td>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1.000000</td>
+      <td>6.0</td>
+      <td>-3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 ### 4. Drop outliers from the data
 
 
@@ -161,11 +428,11 @@ showDist(users_copy, ['combinedDuration', 'selfAge', 'shareRatio', 'ageDifferenc
 ```
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_8_0.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_13_0.png'}})
 
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_8_1.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_13_1.png'}})
 
 
 
@@ -183,11 +450,200 @@ showDist(users, ['combinedDuration', 'selfAge', 'shareRatio', 'ageDifference'])
 
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_9_1.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_14_1.png'}})
 
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_9_2.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_14_2.png'}})
+
+
+
+```python
+print(users.shape)
+users.describe()
+```
+
+    (174, 14)
+
+
+
+
+
+<div style="overflow-x: auto; margin-bottom: 15px;">
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>married</th>
+      <th>relDuration</th>
+      <th>cohabiting</th>
+      <th>cohabDuration</th>
+      <th>selfAge</th>
+      <th>partnerAge</th>
+      <th>female</th>
+      <th>income</th>
+      <th>education</th>
+      <th>numShared</th>
+      <th>numAccsAll</th>
+      <th>shareRatio</th>
+      <th>combinedDuration</th>
+      <th>ageDifference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+      <td>174.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.339080</td>
+      <td>78.551724</td>
+      <td>0.747126</td>
+      <td>60.413793</td>
+      <td>33.264368</td>
+      <td>32.701149</td>
+      <td>0.431034</td>
+      <td>2.908046</td>
+      <td>3.977011</td>
+      <td>5.448276</td>
+      <td>17.856322</td>
+      <td>0.358119</td>
+      <td>108.758621</td>
+      <td>0.563218</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.474763</td>
+      <td>77.752945</td>
+      <td>0.435914</td>
+      <td>78.781699</td>
+      <td>7.216647</td>
+      <td>9.121676</td>
+      <td>0.496650</td>
+      <td>1.339763</td>
+      <td>1.253684</td>
+      <td>5.476716</td>
+      <td>10.841317</td>
+      <td>0.301911</td>
+      <td>116.214294</td>
+      <td>5.721274</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>2.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>19.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>2.500000</td>
+      <td>-20.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.000000</td>
+      <td>25.000000</td>
+      <td>0.250000</td>
+      <td>0.250000</td>
+      <td>28.000000</td>
+      <td>26.000000</td>
+      <td>0.000000</td>
+      <td>2.000000</td>
+      <td>3.000000</td>
+      <td>2.000000</td>
+      <td>11.000000</td>
+      <td>0.111111</td>
+      <td>29.250000</td>
+      <td>-2.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.000000</td>
+      <td>50.500000</td>
+      <td>1.000000</td>
+      <td>27.000000</td>
+      <td>32.000000</td>
+      <td>31.000000</td>
+      <td>0.000000</td>
+      <td>3.000000</td>
+      <td>4.000000</td>
+      <td>4.000000</td>
+      <td>16.000000</td>
+      <td>0.258333</td>
+      <td>66.750000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1.000000</td>
+      <td>117.750000</td>
+      <td>1.000000</td>
+      <td>81.000000</td>
+      <td>38.000000</td>
+      <td>38.000000</td>
+      <td>1.000000</td>
+      <td>4.000000</td>
+      <td>5.000000</td>
+      <td>8.000000</td>
+      <td>24.750000</td>
+      <td>0.520833</td>
+      <td>146.250000</td>
+      <td>3.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1.000000</td>
+      <td>346.000000</td>
+      <td>1.000000</td>
+      <td>360.000000</td>
+      <td>53.000000</td>
+      <td>58.000000</td>
+      <td>1.000000</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+      <td>39.000000</td>
+      <td>59.000000</td>
+      <td>1.000000</td>
+      <td>517.500000</td>
+      <td>32.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 
 
 
@@ -243,7 +699,7 @@ plt.show()
 ```
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_14_0.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_20_0.png'}})
 
 
 
@@ -267,7 +723,7 @@ plt.show()
 ```
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_15_0.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_21_0.png'}})
 
 
 
@@ -291,7 +747,7 @@ plt.show()
 ```
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_16_0.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_22_0.png'}})
 
 
 ### 2. Compare ratio of sharing across medians of different variables
@@ -341,21 +797,21 @@ plt.tight_layout()
 ```
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_18_0.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_24_0.png'}})
 
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_18_1.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_24_1.png'}})
 
 
 ### 3. Logistic regression with recursive feature elimination
-#### Notes on logistic regression,
+#### [1] Notes on logistic regression,
 * First, logistic regression does not require a linear relationship between the dependent and independent variables.
 * Second, the error terms (residuals) do not need to be normally distributed.
 * Third, homoscedasticity is not required. (in other words, the variance of DV need not stay constant as IV varies)
 * Finally, the dependent variable in logistic regression is not measured on an interval or ratio scale.
 
-#### and assumptions of logistic regression [1]
+#### and assumptions of logistic regression
 * First, binary logistic regression requires the dependent variable to be binary and ordinal logistic regression requires the dependent variable to be ordinal.
 * Second, logistic regression requires the observations to be independent of each other.  In other words, the observations should not come from repeated measurements or matched data.
 * Third, logistic regression requires there to be little or no multicollinearity among the independent variables.  This means that the independent variables should not be too highly correlated with each other.
@@ -581,7 +1037,7 @@ res_table
 
 
 
-<div>
+<div style="overflow-x: auto; margin-bottom: 15px;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -737,7 +1193,7 @@ sb.despine(offset=10, trim=True)
 ```
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_28_0.png'}})
+![png](/assets/img/rcs-user-regressions/output_34_0.png)
 
 
 ### 5. Linear regression with best subset selection
@@ -772,7 +1228,7 @@ def getBest(k):
     return best_model
 ```
 
-#### 5-2. Build models and select the model with the best subset of features
+### 5-2. Build models and select the model with the best subset of features
 
 
 ```python
@@ -921,7 +1377,7 @@ print(wu_test(form=eqn, data=users, variable='selfAge').summary())
 ```
 
     WU TEST: The p_value of the added residual is 8.8070e-03
-    	 This is significant at the alpha=0.05 level
+         This is significant at the alpha=0.05 level
     
     
                                 OLS Regression Results                            
@@ -969,11 +1425,11 @@ residual_pp = stats.probplot(best_residual, plot=plt)
 
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_38_1.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_44_1.png'}})
 
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_38_2.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_44_2.png'}})
 
 
 Is this a sufficiently good model?
@@ -1227,7 +1683,7 @@ print(results_table)
 
 
 ### 8. Two-Stage Least Squares Regression (2SLS)
-2SLS allows dealing with endogeneity in variables.
+By using 2SLS, we can deal with an endogeneity in variables
 
 
 ```python
@@ -1310,7 +1766,7 @@ plt.tight_layout()
 ```
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_57_0.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_63_0.png'}})
 
 
 
@@ -1462,7 +1918,7 @@ Image(dt_graph[0].create_png())
 
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_63_0.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_69_0.png'}})
 
 
 
@@ -1514,7 +1970,7 @@ Image(dt_graph[0].create_png())
 
 
 
-![png]({{'/assets/img/rcs-user-regressions/output_66_0.png'}})
+![png]({{'/assets/img/rcs-user-regressions/output_72_0.png'}})
 
 
 

@@ -9,7 +9,11 @@ layout: default
       {% for project in site.categories.project %}
       <li>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ project.date | date: date_format }}</span>
+        {% if project.updated %}
+          <span class="post-meta">Created: {{ project.date | date: date_format }} — Updated: {{ project.updated | date: date_format }}</span>
+        {% else %}
+          <span class="post-meta">Created: {{ project.date | date: date_format }}</span>
+        {% endif %}
         <h3>
           <a class="post-link" href="{{ project.url | relative_url }}">
             {{ project.title | escape }}

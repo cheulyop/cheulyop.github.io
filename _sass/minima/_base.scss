@@ -154,7 +154,7 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid #002b36;
+  /*border: 1px solid #002b36;*/
   border-radius: 3px;
   background-color: #002b36;
 }
@@ -251,7 +251,7 @@ pre {
  * Tables
  */
 
-table {
+/*table {
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   padding: 0; }
   table tr {
@@ -263,42 +263,44 @@ table {
       background-color: #f8f8f8; }
       table tr th {
       font-weight: bold;
-      border: 1px solid #cccccc;
+      border: 0px solid #cccccc;
       text-align: left;
       margin: 0;
-      padding: 6px 13px; }
+      padding: 3px 10px; }
     table tr td {
-      border: 1px solid #cccccc;
+      border: 0px solid #cccccc;
       text-align: left;
       margin: 0;
-      padding: 6px 13px; }
+      padding: 3px 10px; }
     table tr th :first-child, table tr td :first-child {
       margin-top: 0; }
     table tr th :last-child, table tr td :last-child {
-margin-bottom: 0; }
+margin-bottom: 0; }*/
 
-/*table {
-  margin-bottom: $spacing-unit;
+table {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   width: 100%;
   text-align: $table-text-align;
   color: lighten($text-color, 18%);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid #fff;
+  tr {
+    background-color: #f8f8f8;
+  }
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: lighten(#fff, 6%);
     }
   }
   th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    padding: ($spacing-unit / 4) ($spacing-unit / 3);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: lighten(#fff, 3%);
+    border: 1px solid darken(#fff, 4%);
+    border-bottom-color: darken(#fff, 12%);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid #fff;
   }
 }
-*/
