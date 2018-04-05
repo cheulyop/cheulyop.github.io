@@ -4,13 +4,13 @@ layout: default
 
 <div class="home">
   {% if site.categories.blog.size > 0 %}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Blog" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title | default: "Postings" }}</h2>
     <ul class="post-list">
       {% for post in site.categories.blog %}
       <li>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {% if post.updated %}
-          <span class="post-meta">Created: {{ post.date | date: date_format }} — Updated: {{ post.updated | date: date_format }}</span>
+          <span class="post-meta">Updated: {{ post.updated | date: date_format }}</span>
         {% else %}
           <span class="post-meta">Created: {{ post.date | date: date_format }}</span>
         {% endif %}

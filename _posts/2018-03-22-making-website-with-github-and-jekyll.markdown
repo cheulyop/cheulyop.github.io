@@ -67,9 +67,9 @@ Now you should be able to play around with files and make changes to the website
 ### References
 Here are some resources I used as I was creating this website.
 
-* [A beginner's guide to setting up a development environment on Mac OS X][3]: It might be off-topic, but I found this document useful for setting up a dev environment. Thanks to [`nicolashery`][4] for putting these together. However, as some parts of this document were outdated, I didn't follow everything in the document.
-* [Make a Static Website with Jekyll][5]: A great guide by [Tania][6].
-* [Organizing Jekyll Pages][13]: A blog post by [Damon Bauer][14] on how to add pages to Jekyll website and organize them under a subdirectory.
+* [A beginner's guide to setting up a development environment on Mac OS X][3]: by [`nicolashery`][4].
+* [Make a Static Website with Jekyll][5]: by [Tania Rascia][6].
+* [Organizing Jekyll Pages][13]: by [Damon Bauer][14].
 
 [1]: https://jekyllrb.com/
 [2]: https://www.squarespace.com/

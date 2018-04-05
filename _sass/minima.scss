@@ -3,21 +3,22 @@
 // Define defaults for each variable.
 
 $base-font-family: "Menlo-Regular", monospace !default;
-$base-font-size:   13px !default;
+$base-font-size:   14px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
+$alt-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #839496 !default;
-$background-color: #eee8d5 !default;
+$text-color:       darken(black, 20%) !default;
+$background-color: darken(white, 4%) !default;
 $brand-color:      #b58900 !default;
 
-$title-color:	   #cb4b16;
-$emph-color:       #2aa198;
-$grey-color:       #b58900;
-$link-color:       #268bd2;
+$title-color:	   darken(black, 20%);
+$emph-color:       darken(black, 33%);
+$grey-color:       darken(black, 33%);
+$link-color:       #2a7ae2;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 

@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Blog
-permalink: /blog/
+title: Postings
+permalink: /postings/
 order: 2
 ---

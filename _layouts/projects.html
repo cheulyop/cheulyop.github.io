@@ -10,7 +10,7 @@ layout: default
       <li>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {% if project.updated %}
-          <span class="post-meta">Created: {{ project.date | date: date_format }} — Updated: {{ project.updated | date: date_format }}</span>
+          <span class="post-meta">Updated: {{ project.updated | date: date_format }}</span>
         {% else %}
           <span class="post-meta">Created: {{ project.date | date: date_format }}</span>
         {% endif %}
