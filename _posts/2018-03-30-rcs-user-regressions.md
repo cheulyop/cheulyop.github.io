@@ -2,12 +2,16 @@
 layout: post
 title:  "Looking into Couples' Account Sharing with Python"
 date: 2018-03-30 00:00:00 -0400
-updated: 2018-04-01 00:00:00 -0400
+updated: 2018-05-14 00:00:00 -0400
 categories: [blog]
 published: true
 ---
 
-I've been working with [survey](http://cmu.ca1.qualtrics.com/jfe/form/SV_beZL6a2GYEOjgwt) responses collected from Amazon Mechanical Turk for past few months to study how couples share online accounts. My main focus was to look into what variables—including age, gender, relationship status, income, and education—are related to the higher ratio of sharing, which was calculated as the number of shared accounts divided by the number of total accounts owned. In this process, I broke variables down across their medians, then conducted hypothesis tests and regression, both linear and logistic. As the result, I found some interesting relationships between sharing and different variables, independently and combined. Below are Python codes I wrote to work with data, mostly numerical in this case.
+In this post are codes I wrote for the exploratory analysis of the data for a publication that I'm currently working on. The original data was collected from Amazon Mechanical Turk with this [survey](http://cmu.ca1.qualtrics.com/jfe/form/SV_beZL6a2GYEOjgwt).
+
+I intended to study the behavior of sharing online accounts among couples in romantic relationships. To do so, I collected data on the variety of digital accounts people share with their romantic partners, along with data on their age, gender, income, education, relationship status, relationship duration, and so forth. With collected data, I conducted hypothesis tests and regressions to find patterns in people's sharing behavior. 
+
+The publication based on analyses in this post will be available upcoming June in the [Symposium on Usable Privacy and Security (SOUPS)](https://www.usenix.org/conference/soups2018).
 
 ## Data Preparation
 
