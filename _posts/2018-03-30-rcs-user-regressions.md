@@ -4,7 +4,7 @@ title:  "Looking into Couples' Account Sharing with Python"
 date: 2018-03-30 00:00:00 -0400
 updated: 2018-05-14 00:00:00 -0400
 categories: [blog]
-published: true
+published: false
 ---
 
 In this post are codes I wrote for the exploratory analysis of the data for a publication that I'm currently working on. The original data was collected from Amazon Mechanical Turk with this [survey](http://cmu.ca1.qualtrics.com/jfe/form/SV_beZL6a2GYEOjgwt).
