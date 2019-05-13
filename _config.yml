@@ -1,10 +1,8 @@
-
-title: cheulyoung.park
-author: cheulyoung park
-email: cheulyop at gmail dot com
-description: > # this means to ignore newlines until "baseurl:"
-  I am a Master's student in the Grad. School of Knowledge Service Engineering at Korea Advanced Institute of Technology.
-  I am currently working on the SuggestBot project at Interactive Computing Lab headed by Prof. Uichin Lee. 
+title: Cheulyoung Park
+author: Cheul Young Park
+email: cheulyop@kaist.ac.kr
+description: | # this means to ignore newlines until "baseurl:"
+  Master's Student of KSE @ KAIST
 # social links
 twitter_username: your-twitter-handle
 github_username:  your-github-handle
