@@ -4,7 +4,7 @@
 
     <span class="site-title">
         {% assign name = site.name | split: ' ' %}
-        <a class="page-link" href="{{ site.baseurl | prepend: site.url }}" style="font-size:1.25rem">
+        <a class="page-link" href="{{ site.url }}" style="font-size:1.25rem">
           <strong>{{ name | first }}</strong> {{ name | last }}
         </a>
     </span>
@@ -23,7 +23,7 @@
 
       <div class="trigger">
         <!-- About -->
-        <a class="page-link" href="{{ site.baseurl | prepend: site.url }}">About</a>
+        <a class="page-link" href="{{ site.url }}">About</a>
 
         <!-- Blog -->
         <!-- <a class="page-link" href="{{ '/blog/' | prepend: site.baseurl | prepend: site.url }}">blog</a> -->
