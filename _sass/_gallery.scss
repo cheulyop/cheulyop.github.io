@@ -21,7 +21,8 @@ figcaption {
     height: 100%;
     object-fit: cover;
     box-sizing:border-box;
-    /*padding: $img-spacing;*/
+    padding: $img-spacing;
+    // border: $img-spacing;
 }
 .one {
     width:33.33%;

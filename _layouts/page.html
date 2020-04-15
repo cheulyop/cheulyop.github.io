@@ -12,9 +12,13 @@ layout: default
     {{ content }}
   </article>
 
-<!--   {% if page.news %}
+  {% if page.research %}
+    {% include research.html %}
+  {% endif %}
+
+  {% if page.news %}
     {% include news.html %}
-  {% endif %} -->
+  {% endif %}
 
   {% if page.social %}
     {% include social.html %}

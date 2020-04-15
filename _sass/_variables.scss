@@ -43,6 +43,7 @@ $orange:            #F29105 !default;
 $orange-1:          #ffcc22 !default;
 $blue:              #2698BA !default;
 $blue-1:            #0076df !default;
+$cobalt-blue:		#0047ab !default;
 $dark-blue:         #00369f !default;
 $green:             #00ab37 !default;
 $green-1:           #11D68B !default;
@@ -70,14 +71,15 @@ $darken-2:          rgba(#000,.125) !default;
 $darken-3:          rgba(#000,.25) !default;
 $darken-4:          rgba(#000,.5) !default;
 
-$theme-color:       $purple;
+$theme-color:       $cobalt-blue;
 $code-color:        $dark-gray;
 $text-color:        $mid-gray;
 $background-color:  white;
 
 // Links
 $link-color:        $theme-color;
-$link-hover-color:  darken($theme-color, 40%);
+$link-hover-color:  lighten($theme-color, 40%);
+// $link-hover-color:	$dark-gray;
 
 // Breakpoints
 $breakpoint-md: '(min-width: 52em)';
@@ -90,7 +92,7 @@ $space-3: 2rem !default;
 $space-4: 4rem !default;
 
 $horizontal-spacing-unit:       50px;
-$vertical-spacing-unit:         40px;
+$vertical-spacing-unit:         15px;
 $nav-height:                    56px;
 
 // Buttons

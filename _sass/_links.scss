@@ -1,18 +1,19 @@
 a {
-    color: $text-color;
+    color: $theme-color;
     text-decoration: none;
 
     &:hover {
-        color: $theme-color;
+        color: $link-hover-color;
         text-decoration: none;
     }
 }
 
 article a, .news a {
     color: $theme-color;
-    font-weight: 100;
+    // font-weight: 100;
 
     &:hover {
+        color: $link-hover-color;
         text-decoration: underline;
     }
 }

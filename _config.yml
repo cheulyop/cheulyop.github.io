@@ -3,11 +3,9 @@
 # -----------------------------------------------------------------------------
 name: Cheulyoung Park
 email: cheulyop@gmail.com
-description: > # this means to ignore newlines until "url:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: >
-  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+description:  # this means to ignore newlines until "url:"
+footer_text:  # Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+              # Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
 url:  # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/
@@ -35,7 +33,7 @@ publons_id: # your ID on Publons
 research_gate_profile: # your profile on ResearchGate
 blogger_url: # your blogger URL
 
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+google_analytics: UA-163428563-1 # out your google-analytics code
 
 # -----------------------------------------------------------------------------
 # Blog
@@ -65,6 +63,11 @@ enable_katex:       true
 # Collections
 # -----------------------------------------------------------------------------
 collections:
+  research:
+    defaults:
+      layout: post
+    output: true
+    permalink: /research/:path/
   news:
     defaults:
       layout: post
