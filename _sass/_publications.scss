@@ -9,6 +9,7 @@
         text-align: center;
     }
 }
+
 .year {
     border-top: 1px solid $light-gray;
     color: $light-gray;
@@ -16,6 +17,7 @@
     padding-top: 1ex;
     text-align: right;
 }
+
 .bibliography {
     margin-bottom: 50px;
     margin-top: 20px;
@@ -82,7 +84,15 @@
             left: -7em;
     }
  }
+
 .star {
     color: $theme-color;
     font-style: normal;
+}
+
+.pub-heading {
+    h4 {
+        font-weight: bold;
+        color: $theme-color;
+    }
 }
