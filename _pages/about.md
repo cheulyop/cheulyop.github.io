@@ -4,10 +4,10 @@ permalink: /
 title: Profile
 description: cheulyop {at} kaist {dot} ac {dot} kr
 
-profile:
+<!-- profile:
   align: left
   image: prof_pic.png
-  address:
+  address: -->
 
 content_align: right
 
@@ -21,5 +21,5 @@ research: true
 * Currently a member of the [Interactive Computing Lab](http://ic.kaist.ac.kr/wiki/wiki.cgi?Main), working on the [SuggestBot Project](https://suggestbot.github.io/).
 
 * **CV:**
-<a class="page-link" href="{{ '/assets/pdf/cheulyoung_park-short_cv.pdf' | prepend: site.baseurl | prepend: site.url }}">[PDF] (As of Apr. 2020)</a>
+<a class="page-link" href="{{ '/assets/pdf/cheulyoung_park-short_cv.pdf' | prepend: site.baseurl | prepend: site.url }}">[PDF] (As of May 2020)</a>
 
