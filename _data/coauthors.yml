@@ -1,35 +1,51 @@
 Hong:
-    url: http://www.cs.cmu.edu/~jasonh/
+    Jason:
+        url: http://www.cs.cmu.edu/~jasonh/
 
 Dabbish:
-    url: http://www.lauradabbish.com/
+    Laura:
+        url: http://www.lauradabbish.com/
 
 Zhao:
-    url: https://www.siyanz.com/
+    Siyan:
+        url: https://www.siyanz.com/
 
 Faklaris:
-    url: https://corifaklaris.com/
+    Cori:
+        url: https://corifaklaris.com/
 
 Sciuto:
-    url: http://www.alexsciuto.com/
+    Alex:
+        url: http://www.alexsciuto.com/
 
 Lee:
-    url: http://ic.kaist.ac.kr/wiki/wiki.cgi?UichinLee
+    Uichin:
+        url: http://ic.kaist.ac.kr/wiki/wiki.cgi?UichinLee
+    Jae-Gil:
+        url: https://dm.kaist.ac.kr/jaegil/
+    Sangsu:
+        url: https://scholar.google.com/citations?user=1cgtVW8AAAAJ&hl=en
 
 Jeong:
-    url: http://ibrain.kaist.ac.kr/professor/
+    Yong:
+        url: http://ibrain.kaist.ac.kr/professor/
 
 Oh:
-    url: https://aliceoh9.github.io/
+    Alice:
+        url: https://aliceoh9.github.io/
 
 Hadjileontiadis:
-    url: https://scholar.google.com/citations?user=OfAkcXkAAAAJ&hl=en
+    Leontios:
+        url: https://scholar.google.com/citations?user=OfAkcXkAAAAJ&hl=en
 
 Khandoker:
-    url: https://scholar.google.com/citations?hl=en&user=MpOViugAAAAJ
+    Ahsan:
+        url: https://scholar.google.com/citations?hl=en&user=MpOViugAAAAJ
 
 Kim:
-    url: https://scholar.google.co.kr/citations?user=sI0qT0MAAAAJ&hl=en
+    Auk:
+        url: https://kimauk.github.io/
 
 Kang:
-    url: https://scholar.google.co.kr/citations?hl=en&user=B9HMz0EAAAAJ
+    Soowon:
+        url: https://scholar.google.co.kr/citations?hl=en&user=B9HMz0EAAAAJ

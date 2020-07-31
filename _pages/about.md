@@ -2,21 +2,21 @@
 layout: about
 permalink: /
 title: Profile
-description: cheulyop {at} kaist {dot} ac {dot} kr
+description: cheulyop [at] kaist [dot] ac [dot] kr
 
-<!-- profile:
+profile:
   align: left
   image: prof_pic.png
-  address: -->
+  address:
 
 content_align: right
 
 news: false
-social: true
 research: true
+social: true
 ---
 
-* Master's student in the [Graduate School of Knowledge Service Engineering](https://kse.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/). *(expected graduation: June 2020)*
+* Master's student in the [Graduate School of Knowledge Service Engineering](https://kse.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/). *(expected graduation: December 2020)*
 
 * Currently a member of the [Interactive Computing Lab](http://ic.kaist.ac.kr/wiki/wiki.cgi?Main), working on the [SuggestBot Project](https://suggestbot.github.io/).
 

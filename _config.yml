@@ -103,6 +103,7 @@ plugins:
 scholar:
 
   last_name: Park
+  first_name: Cheulyoung
 
   style: apa
   locale: en

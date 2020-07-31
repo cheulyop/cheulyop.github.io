@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: Publications
 description:
-years: [2018]
+years: [2020, 2018]
 ---
 
 <header class="pub-heading">
