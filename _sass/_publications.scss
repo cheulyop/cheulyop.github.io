@@ -1,4 +1,7 @@
 .publications {
+    h1 {
+        font-weight: 550;
+    }
     h2 {
         color: $theme-color;
         // border-bottom: 1px solid $theme-color;
@@ -13,7 +16,7 @@
 .year {
     border-top: 1px solid $grey-color-light;
     color: $light-gray;
-    margin: 0 0 -1ex 0;
+    margin: 0 0 -4ex 0;
     padding-top: 1ex;
     text-align: right;
 }
@@ -92,7 +95,7 @@
 
 .pub-heading {
     h4 {
-        font-weight: bold;
+        font-weight: 550;
         color: $theme-color;
     }
 }

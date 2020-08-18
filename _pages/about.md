@@ -1,7 +1,7 @@
 ---
 layout: about
 permalink: /
-title: Profile
+title: Cheul Young Park
 description: cheulyop [at] kaist [dot] ac [dot] kr
 
 profile:
