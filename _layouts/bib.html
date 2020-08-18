@@ -88,6 +88,9 @@
   {% if entry.slides %}
     [<a href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
   {% endif %}
+  {% if entry.dataset %}
+    [<a href="{{ entry.dataset }}" target="_blank">Dataset</a>]
+  {% endif %}
   {% if entry.code %}
     [<a href="{{ entry.code }}" target="_blank">Code</a>]
   {% endif %}

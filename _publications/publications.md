@@ -1,16 +1,14 @@
 ---
-layout: page
-permalink: /publications/
-title: Publications
-years: [2020, 2018]
-visibility: false
+layout: none
 description:
+years: [2020, 2018]
 ---
+
 
 <header class="pub-heading">
 	<h4>Manuscripts & Preprints</h4>
 </header>
-Note that works listed below are subject to changes during the publication process.
+<!-- Note that works listed below are subject to changes during the publication process. -->
 
 {% bibliography -f preprints %}
 

@@ -12,6 +12,8 @@ profile:
 content_align: right
 
 news: false
+publications: true
+courses: true
 research: true
 social: true
 ---
@@ -21,5 +23,4 @@ social: true
 * Currently a member of the [Interactive Computing Lab](http://ic.kaist.ac.kr/wiki/wiki.cgi?Main), working on the [SuggestBot Project](https://suggestbot.github.io/).
 
 * **CV:**
-<a class="page-link" href="{{ '/assets/pdf/cheulyoung_park-short_cv.pdf' | prepend: site.baseurl | prepend: site.url }}">[PDF] (As of May 2020)</a>
-
+<a class="page-link" href="{{ '/assets/pdf/cheulyoung_park-short_cv.pdf' | prepend: site.baseurl | prepend: site.url }}">[PDF]</a> (last updated: May 2020)

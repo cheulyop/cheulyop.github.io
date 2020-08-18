@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="post">
 
   <header class="post-header">
@@ -11,6 +12,14 @@ layout: default
   <article class="post-content {{page.title}} clearfix">
     {{ content }}
   </article>
+
+  {% if page.publications %}
+    {% include publications.html %}
+  {%endif%}
+
+  {% if page.courses %}
+    {% include courses.html %}
+  {% endif %}
 
   {% if page.research %}
     {% include research.html %}

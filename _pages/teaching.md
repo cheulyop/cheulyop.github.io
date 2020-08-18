@@ -2,6 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
+visibility: false
 description:
 ---
 
@@ -10,7 +11,7 @@ description:
 </header>
 
 * [KAIST IT Academy](https://ita.kaist.ac.kr/) - **Image Deep Learning with PyTorch** (*Feb. 2020, Co-instructed with [Jisu Han](linkedin.com/in/jisuhan))*
-  * A 2-week course on the basics of deep learning with PyTorch in Korean & English, with an emphasis on processing image data.
+  * A 2-week course on the basics of deep learning with PyTorch in Korean & English, with a focus on processing images.
 
 <header class="pub-heading">
 	<h4>Programming</h4>

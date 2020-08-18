@@ -1,4 +1,6 @@
 .profile {
+    margin: 30px -2em -2.5ex -2em;
+
     img {
         box-shadow: 0 0 1px $grey-color;
         width: 100%;
@@ -10,9 +12,36 @@
     p { margin: 0; }
 }
 
+.publications {
+    // border-top: 1px solid $mid-gray;
+    margin: 30px -2em -2.5ex -2em;
+    // margin-top: 30px;
+    padding-top: 20px;
+
+    h1 {
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.courses {
+    // border-top: 1px solid $mid-gray;
+    margin: 30px -2em -2.5ex -2em;
+    // margin-top: 30px;
+    padding-top: 20px;
+
+    h1 {
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
 .research {
-    border-top: 1px solid $grey-color-light;
-    margin-top: 30px;
+    // border-top: 1px solid $mid-gray;
+    margin: 30px -2em -2.5ex -2em;
+    // margin-top: 30px;
     padding-top: 20px;
 
     h1 {
@@ -23,7 +52,7 @@
 }
 
 .news {
-    border-top: 1px solid $grey-color-light;
+    // border-top: 1px solid $grey-color-light;
     margin-top: 30px;
     padding-top: 20px;
 
@@ -49,7 +78,8 @@
 }
 
 .social {
-    border-top: 1px solid $grey-color-light;
-    margin-top: 50px;
+    // border-top: 1px solid $mid-gray;
+    margin: 30px -2em -2.5ex -2em;
+    // margin-top: 50px;
     padding-top: 20px;
 }
