@@ -18,9 +18,11 @@ research: true
 social: true
 ---
 
-* Master's student in the [Graduate School of Knowledge Service Engineering](https://kse.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/). *(expected graduation: December 2020)*
+* Master's student in the [Graduate School of Knowledge Service Engineering](https://kse.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/) (expected graduation: Feb '21).
 
-* Currently a member of the [Interactive Computing Lab](http://ic.kaist.ac.kr/wiki/wiki.cgi?Main), working on the [SuggestBot Project](https://suggestbot.github.io/).
+* I'm a member of the [Interactive Computing Lab](http://ic.kaist.ac.kr/wiki/wiki.cgi?Main), and I work on:
+	* [K-EmoCon dataset](https://doi.org/10.5281/zenodo.3762961) for [SuggestBot Project](https://suggestbot.github.io/).
+	* Recognizing emotions from peripheral physiological signals with machine learning. See [PyTEAP](https://github.com/cheulyop/PyTEAP) and [AdaptiveESM](https://github.com/cheulyop/AdaptiveESM).
 
 * **CV:**
-<a class="page-link" href="{{ '/assets/pdf/cheulyoung_park-short_cv.pdf' | prepend: site.baseurl | prepend: site.url }}">[PDF]</a> (last updated: May 2020)
+<a class="page-link" href="{{ '/assets/pdf/cv_cheulyoung_park.pdf' | prepend: site.baseurl | prepend: site.url }}">[PDF]</a> (last updated: Sep '20)
