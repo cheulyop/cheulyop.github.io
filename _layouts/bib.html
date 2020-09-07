@@ -65,37 +65,37 @@
 
   <span class="links">
   {% if entry.abstract %}
-    [<a class="abstract">Abstract</a>]
+    [<a class="abstract">abstract</a>]
   {% endif %}
   {% if entry.arxiv %}
-    [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
+    [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arxiv</a>]
   {% endif %}
   {% if entry.html %}
-    [<a href="{{ entry.html }}" target="_blank">HTML</a>]
+    [<a href="{{ entry.html }}" target="_blank">html</a>]
   {% endif %}
   {% if entry.pdf %}
-    [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
+    [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">pdf</a>]
   {% endif %}
   {% if entry.url %}
-    [<a href="{{entry.url}}" target="_blank">URL</a>]
+    [<a href="{{entry.url}}" target="_blank">web</a>]
   {% endif %}
   {% if entry.supp %}
-    [<a href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Supp</a>]
+    [<a href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">supp</a>]
   {% endif %}
   {% if entry.poster %}
-    [<a href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Poster</a>]
+    [<a href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">poster</a>]
   {% endif %}
   {% if entry.slides %}
-    [<a href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
+    [<a href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">slides</a>]
   {% endif %}
   {% if entry.dataset %}
-    [<a href="{{ entry.dataset }}" target="_blank">Dataset</a>]
+    [<a href="{{ entry.dataset }}" target="_blank">data</a>]
   {% endif %}
   {% if entry.code %}
-    [<a href="{{ entry.code }}" target="_blank">Code</a>]
+    [<a href="{{ entry.code }}" target="_blank">code</a>]
   {% endif %}
   {% if entry.press %}
-    [<a href="{{ entry.press }}" target="_blank">Press</a>]
+    [<a href="{{ entry.press }}" target="_blank">press</a>]
   {% endif %}
   </span>
 
@@ -105,4 +105,5 @@
     <p>{{ entry.abstract }}</p>
   </span>
   {% endif %}
+
 </div>
