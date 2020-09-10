@@ -5,15 +5,15 @@ years: [2020, 2018]
 ---
 
 
-<header class="pub-heading">
+<!-- <header class="pub-heading">
 	<h4>Manuscripts & Preprints</h4>
 </header>
-<!-- Note that works listed below are subject to changes during the publication process. -->
+Note that works listed below are subject to changes during the publication process.
 
-{% bibliography -f preprints %}
+{% bibliography -f preprints %} -->
 
 <header class="pub-heading">
-	<h4>Refereed Conference Papers</h4>
+	<h4>Refereed Conference & Journal Papers</h4>
 </header>
 
 {% for y in page.years %}
