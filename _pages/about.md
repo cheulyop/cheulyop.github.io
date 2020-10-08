@@ -25,4 +25,4 @@ social: true
 	* Recognizing emotions from peripheral physiological signals with machine learning. See [PyTEAP](https://github.com/cheulyop/PyTEAP) and [AdaptiveESM](https://github.com/cheulyop/AdaptiveESM).
 
 * **CV:**
-<a class="page-link" href="{{ '/assets/pdf/cv_cheulyoung_park.pdf' | prepend: site.baseurl | prepend: site.url }}">[PDF]</a> (last updated: Sep '20)
+<a class="page-link" href="{{ '/assets/pdf/cv_cheulyoung_park.pdf' | prepend: site.baseurl | prepend: site.url }}">[PDF]</a> (last updated: Oct. '20)
