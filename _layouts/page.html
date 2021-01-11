@@ -13,6 +13,10 @@ layout: default
     {{ content }}
   </article>
 
+  {% if page.news %}
+    {% include news.html %}
+  {% endif %}
+
   {% if page.publications %}
     {% include publications.html %}
   {%endif%}
@@ -23,10 +27,6 @@ layout: default
 
   {% if page.courses %}
     {% include courses.html %}
-  {% endif %}
-
-  {% if page.news %}
-    {% include news.html %}
   {% endif %}
 
   {% if page.social %}
