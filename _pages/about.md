@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: Cheul Young Park
-description: cheulyop [at] gmail [dot] com
+description: contact me @ cheulyop [at] gmail [dot] com || cheul [at] silviahealth [dot] com
 
 profile:
   align: left
@@ -18,14 +18,14 @@ research: true
 social: true
 ---
 
-My research interests include Affective Computing & Human-Computer Interaction. I am also interested in applying Machine Learning to understand the relationship between our affective states and physiological signals and exploring how we can use that knowledge for real-world applications such as digital healthcare.
+I am currently working as an AI Researcher at **[Silvia Health](https://silvia.io)**.
 
-I am currently a Master's student in the [Graduate School of Knowledge Service Engineering](https://kse.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/). I recently defended my thesis and will be graduating this February.
+At Silvia, we are building a technology that enables early screening of cognitive impairments from spontaneous speech, and [more](https://play.google.com/store/apps/details?id=io.silvia).
 
-I am a member of the [Interactive Computing Lab](http://ic.kaist.ac.kr/wiki/wiki.cgi?Main) at KAIST. During my time here, I worked on the following projects:
-* [AdaptiveESM](https://github.com/cheulyop/AdaptiveESM) - an adaptive sampling method based on active learning for emotions in the wild.
-* [PyTEAP](https://github.com/cheulyop/PyTEAP) - a Python implementation of the Toolbox for Emotion Analysis using Physiological signals ([TEAP](https://github.com/Gijom/TEAP)).
-* [K-EmoCon dataset](https://doi.org/10.5281/zenodo.3762961) for the [SuggestBot Project](https://suggestbot.github.io/) - a multimodal sensor dataset for continuous emotion recognition in naturalistic conversations.
+I was a member of the [Interactive Computing Lab](http://ic.kaist.ac.kr/wiki/wiki.cgi?Main) at [KAIST](https://www.kaist.ac.kr/en/). During my time there, I worked on the following projects:
+* [AdaptiveESM](https://github.com/cheulyop/AdaptiveESM) - an adaptive sampling method based on active learning for collecting emotions in the wild.
+* [PyTEAP](https://github.com/cheulyop/PyTEAP) - a Python implementation of the [TEAP](https://github.com/Gijom/TEAP) (Toolbox for Emotion Analysis using Physiological signals).
+* [K-EmoCon Dataset](https://doi.org/10.5281/zenodo.3762961) for the [SuggestBot Project](https://suggestbot.github.io/) -- a multimodal sensor dataset for continuous emotion recognition in naturalistic conversations.
 
 **CV:**
-<a class="page-link" href="{{ '/assets/pdf/cheulyop-cv-jan21.pdf' | prepend: site.baseurl | prepend: site.url }}">[PDF]</a> (last updated: Jan. '21)
+[<a class="page-link" href="{{ '/assets/pdf/cv-jan22.pdf' | prepend: site.baseurl | prepend: site.url }}">pdf</a>] (last updated: *Jan. '22*)
