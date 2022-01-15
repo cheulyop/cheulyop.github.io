@@ -99,3 +99,12 @@
         color: $theme-color;
     }
 }
+
+.pub-caption {
+    height: 100%;
+    margin: 0;
+    color: $caption-color;
+    text-align: left;
+    vertical-align: middle;
+    font-size: $caption-font-size;
+}

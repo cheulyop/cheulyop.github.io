@@ -63,6 +63,8 @@ $purple:            #B509AC !default;
 $pink:              #f92080 !default;
 $light-pink:        #ffdddd !default;
 $yellow:            #efcc00 !default;
+$geek-blue:         #4d61ff !default;
+$geek-blue-700:     #3644d9 !default;
 
 $white:             #fff !default;
 $dark-gray:         #333 !default;
@@ -79,14 +81,14 @@ $darken-2:          rgba(#000,.125) !default;
 $darken-3:          rgba(#000,.25) !default;
 $darken-4:          rgba(#000,.5) !default;
 
-$theme-color:       $cobalt-blue;
+$theme-color:       $geek-blue-700;
 $code-color:        $dark-gray;
 $text-color:        $mid-gray;
-$background-color:  white;
+$background-color:  #fafafa;
 
 // Links
 $link-color:        $theme-color;
-$link-hover-color:  lighten($theme-color, 40%);
+$link-hover-color:  darken($theme-color, 25%);
 // $link-hover-color:	$dark-gray;
 
 // Breakpoints

@@ -1,11 +1,11 @@
 <div class="news">
-  <h1 class="post-title">News</h1>
+  <h1 class="post-title">Updates</h1>
   {% if site.news  %}
     <table>
     {% assign news = site.news | reverse %}
     {% for item in news limit: site.news_limit %}
       <tr>
-        <td class="date">{{ item.date | date: "%b %-d, %Y" }}</td>
+        <td class="date">📌 {{ item.date | date: "%b %-d, %Y" }}</td>
         <td class="announcement">
           {% if item.inline %}
             {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
