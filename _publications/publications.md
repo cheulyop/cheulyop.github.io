@@ -1,16 +1,16 @@
 ---
 layout: none
 description:
-years: [2020, 2018]
+years: [2021, 2020, 2018]
 ---
 
 
-<!-- <header class="pub-heading">
+<header class="pub-heading">
 	<h4>Manuscripts & Preprints</h4>
 </header>
-Note that works listed below are subject to changes during the publication process.
+<h5 class="pub-caption">* Works in this section are subject to changes until their official publication</h5>
 
-{% bibliography -f preprints %} -->
+{% bibliography -f preprints %}
 
 <header class="pub-heading">
 	<h4>Refereed Conference & Journal Papers</h4>
