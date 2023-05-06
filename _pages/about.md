@@ -6,7 +6,7 @@ description: contact me @ cheulyop [at] gmail [dot] com || cheul [at] silviaheal
 
 profile:
   align: left
-  image: profile.png
+  image: apkc.png
   address:
 
 content_align: right
