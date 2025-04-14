@@ -1,4 +1,13 @@
 module.exports = function (eleventyConfig) {
+  // Tell Eleventy to ignore specific directories/files
+  eleventyConfig.ignores.add("node_modules/**");
+  eleventyConfig.ignores.add(".git/**");
+  eleventyConfig.ignores.add(".trunk/**");
+  // Add any other directories you want Eleventy to completely ignore
+
+  // Passthrough copy - static assets from 'assets' directory
+  eleventyConfig.addPassthroughCopy("assets");
+
   // Return your Object options:
   return {
     dir: {
@@ -15,9 +24,8 @@ module.exports = function (eleventyConfig) {
       "html",
       "liquid", // Liquid templates (like Jekyll)
     ],
-    // Passthrough copy - static assets
-    // Add assets directory to copy static files (CSS, images, etc.)
-    passthroughFileCopy: true,
+    // Passthrough copy setting (can often be omitted when using addPassthroughCopy)
+    // passthroughFileCopy: true // We are using addPassthroughCopy above, so this might be redundant but doesn't hurt
   };
 };
 
