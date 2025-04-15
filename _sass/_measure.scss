@@ -1,0 +1,6 @@
+@use "variables" as var;
+
+.measure {
+  margin: 0 auto;
+  max-width: var.$measure-width;
+}

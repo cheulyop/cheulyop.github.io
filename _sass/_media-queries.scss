@@ -1,0 +1,96 @@
+@use "sass:math";
+@use "variables";
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@media screen and (min-width: variables.$viewport-small) {
+  html {
+    font-size: 16px;
+  }
+
+  h1,
+  .h1 {
+    font-size: variables.$h1;
+  }
+
+  .site-header {
+    text-align: left;
+  }
+
+  .site-nav {
+    margin-top: 0;
+  }
+
+  .site-header a {
+    font-size: variables.$h4;
+  }
+
+  .site-header .site-title {
+    font-size: variables.$h3;
+    float: left;
+  }
+
+  .site-header .site-nav {
+    float: right;
+  }
+
+  blockquote {
+    margin-left: variables.$space-3;
+    padding: variables.$space-3;
+  }
+
+  .social-icons-left {
+    text-align: left;
+  }
+
+  .social-icons-right {
+    text-align: right;
+  }
+
+  .img_row {
+    height: math.div(variables.$img-height, 3);
+  }
+
+  .col {
+    padding: math.div(variables.$img-spacing, 3);
+  }
+}
+
+@media screen and (min-width: variables.$viewport-medium) {
+  html {
+    font-size: 18px;
+  }
+
+  .img_row {
+    height: math.div(variables.$img-height, 1.5);
+  }
+
+  .col {
+    padding: math.div(variables.$img-spacing, 1.5);
+  }
+}
+
+@media screen and (min-width: variables.$viewport-large) {
+  html {
+    font-size: 20px;
+  }
+
+  .img_row {
+    height: variables.$img-height;
+  }
+
+  .col {
+    padding: variables.$img-spacing;
+  }
+}
+
+@media screen and (min-width: #{variables.$viewport-large + 14}) {
+  em img {
+    max-width: variables.$measure-width + 14;
+    margin-left: -7em;
+  }
+}

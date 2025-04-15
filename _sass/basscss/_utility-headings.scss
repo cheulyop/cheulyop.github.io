@@ -1,0 +1,39 @@
+@use "../variables" as var;
+
+/* Basscss Utility Headings */
+
+.h00 {
+  font-size: var.$h00;
+}
+
+.h0 {
+  font-size: var.$h0;
+}
+
+@media #{var.$breakpoint-md} {
+  .h00-responsive {
+    font-size: var.$h00-responsive;
+  }
+
+  .h0-responsive {
+    font-size: var.$h0-responsive;
+  }
+
+  .h1-responsive {
+    font-size: var.$h1-responsive;
+  }
+}
+
+@media #{var.$breakpoint-xl} {
+  .h00-responsive {
+    font-size: var.$h00-responsive-max;
+  }
+
+  .h0-responsive {
+    font-size: var.$h0-responsive-max;
+  }
+
+  .h1-responsive {
+    font-size: var.$h1-responsive-max;
+  }
+}
