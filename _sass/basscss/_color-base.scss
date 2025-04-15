@@ -1,0 +1,30 @@
+@use "../variables" as var;
+
+/* Basscss Color Base */
+
+body {
+  color: var.$dark-gray;
+  background-color: white;
+}
+
+a {
+  color: var.$theme-color;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre,
+code {
+  background-color: var.$lighter-gray;
+  border-radius: var.$border-radius;
+}
+
+hr {
+  border: 0;
+  border-bottom-style: solid;
+  border-bottom-width: var.$border-width;
+  border-bottom-color: var.$border-color;
+}

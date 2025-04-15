@@ -1,16 +1,25 @@
 {
   "name": "cheulyop.github.io",
   "version": "1.0.0",
-  "description": "My personal website",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheulyop/cheulyop.github.io.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheulyop/cheulyop.github.io/issues"
+  },
+  "homepage": "https://github.com/cheulyop/cheulyop.github.io#readme",
+  "description": "",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "sass": "^1.86.3"
   }
 }

@@ -3,25 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title> {# Use the 'title' variable from front matter #}
-    <link rel="stylesheet" href="/assets/css/style.css"> {# Example CSS link, adjust path if needed #}
+    <title>{{ title or site.name }}</title> {# Use page title or default site name #}
+    <meta name="description" content="{{ description or site.description }}">
+    {# Link to CSS - We'll need to copy/create this later #}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+
+    {# Add Google Analytics if ID is present #}
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
 </head>
 <body>
     <header>
-        <h1>My Minimalist Website</h1>
-        {# Basic navigation could go here #}
-        <nav>
-            <a href="/">Home</a>
-            {# We'll add links to other sections like News later #}
-        </nav>
+        <div class="wrapper">
+            <nav class="site-nav">
+                {# Basic Navigation Example - Adapt as needed #}
+                <a href="{{ '/' | url }}">Home</a>
+                {# Add other links, potentially from data or collections later #}
+            </nav>
+            <h1 class="site-title"><a href="{{ '/' | url }}">{{ site.name }}</a></h1>
+        </div>
     </header>
 
     <main>
-        {{ content | safe }} {# This is where content from other files will be injected #}
+        <div class="wrapper">
+            {{ content | safe }}
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name</p>
+        <div class="wrapper">
+            <p>&copy; {{ year }} {{ site.name }}.
+                {% if site.last_updated %}Last updated: {{ site.last_updated }}.{% endif %}
+            </p>
+            {# Add social links from site.json data #}
+            <p>
+                {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}">GitHub</a>{% endif %}
+                {% if site.orcid_id %}<a href="https://orcid.org/{{ site.orcid_id }}">ORCID</a>{% endif %}
+                {# Add other social links from site.json #}
+            </p>
+        </div>
     </footer>
+
+    {# Add JavaScript if needed later #}
+    {# <script src="{{ '/assets/js/main.js' | url }}"></script> #}
 </body>
 </html>
