@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title> {# Use the 'title' variable from front matter #}
+    <link rel="stylesheet" href="/assets/css/style.css"> {# Example CSS link, adjust path if needed #}
+</head>
+<body>
+    <header>
+        <h1>My Minimalist Website</h1>
+        {# Basic navigation could go here #}
+        <nav>
+            <a href="/">Home</a>
+            {# We'll add links to other sections like News later #}
+        </nav>
+    </header>
+
+    <main>
+        {{ content | safe }} {# This is where content from other files will be injected #}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+</body>
+</html>
