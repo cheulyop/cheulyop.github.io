@@ -1,0 +1,50 @@
+/* Basic Reset & Minimalist Styles */
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 2em;
+  max-width: 800px;
+  /* Limit width for readability */
+  padding: 0 1em;
+  background-color: #fdfdfd;
+  /* Light background */
+  color: #333;
+  /* Dark text */
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #007bff;
+  /* Simple blue link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header,
+footer {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  color: #666;
+  /* Slightly lighter text for header/footer */
+}
+
+nav a {
+  margin-right: 1em;
+}
+
+main {
+  margin-top: 2em;
+}
+
+/* Add more specific styles as needed */
