@@ -45,6 +45,7 @@
             {# Add social links from site.json data #}
             <p>
                 {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}">GitHub</a>{% endif %}
+                {% if site.linkedin_username %}<a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a>{% endif %}
                 {% if site.orcid_id %}<a href="https://orcid.org/{{ site.orcid_id }}">ORCID</a>{% endif %}
                 {# Add other social links from site.json #}
             </p>
