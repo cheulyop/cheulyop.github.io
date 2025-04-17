@@ -1,6 +1,11 @@
 I am a Software Engineer on the **[Upstage](https://www.upstage.ai/)** Data Team.
 
-I am building a system that helps people better evaluate and guide LLMs.
+I'm interested in two questions:
+
+1. How can we correctly incentivize data contributors so we can have more "good" data?
+2. How can humans and AI work together to create better data?
+
+Towards that, I am building a system that helps people better evaluate and guide LLMs.
 
 I have also worked on applying RAG to build a chat engine for virtual idols, as well as a system for the automatic evaluation of insurance claims.
 
