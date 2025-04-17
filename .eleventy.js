@@ -1,5 +1,6 @@
 const path = require("path");
 const sass = require("sass");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   // Passthrough copy for static assets
@@ -22,6 +23,29 @@ module.exports = function (eleventyConfig) {
 
   // Add the year shortcode
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  // Add blog posts collection
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("posts/*.md")
+      .sort((a, b) => b.date - a.date);
+  });
+
+  // Add custom date filter
+  eleventyConfig.addFilter("date", (dateObj, format = "LLLL dd, yyyy") => {
+    // Ensure dateObj is valid before formatting
+    // Handle potential undefined or null dates from front matter
+    if (!dateObj) {
+      return "Invalid Date"; // Or return an empty string, or handle as needed
+    }
+    // Make sure we're dealing with a Date object
+    const jsDate = dateObj instanceof Date ? dateObj : new Date(dateObj);
+    // Check if the date is valid after conversion
+    if (isNaN(jsDate.getTime())) {
+      return "Invalid Date"; // Handle invalid date strings
+    }
+    return DateTime.fromJSDate(jsDate, { zone: "utc" }).toFormat(format);
+  });
 
   // Add Sass support
   eleventyConfig.addTemplateFormats("scss");
