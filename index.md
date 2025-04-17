@@ -5,6 +5,8 @@ title: Home # Or whatever title you want for the homepage
 
 {% include "about-content.md" %}
 
+<!-- <a class="page-link" href="{{ '/assets/pdf/cv-apr25.pdf' | url }}">CV</a> (Last updated: Apr. 2025) -->
+
 ## Blog
 
 <ul class="post-list">
