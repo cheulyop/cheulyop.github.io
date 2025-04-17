@@ -55,3 +55,18 @@
   display: block;
   font-size: 42px;
 }
+
+// Add styles for individual blog posts
+.blog-post {
+  header {
+    margin-bottom: 1.5rem; // Add space below the header (title + date)
+  }
+
+  // You might want to add other post-specific styles here
+  // e.g., for paragraphs, code blocks, images within the post section
+
+  section > p {
+    // Example: Add spacing between paragraphs if needed
+    // margin-bottom: 1rem;
+  }
+}
