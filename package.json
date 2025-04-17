@@ -20,6 +20,8 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
+    "luxon": "^3.6.1",
     "sass": "^1.86.3"
   }
 }
