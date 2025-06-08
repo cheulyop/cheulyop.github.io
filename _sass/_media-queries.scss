@@ -30,8 +30,12 @@
   }
 
   .site-header .site-title {
-    font-size: variables.$h3;
+    font-size: 2rem !important;
     float: left;
+  }
+
+  .site-header .site-title a {
+    font-size: inherit;
   }
 
   .site-header .site-nav {
