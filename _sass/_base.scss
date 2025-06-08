@@ -29,6 +29,11 @@ body {
   background-color: var.$background-color;
 }
 
+// Add space between fixed header and main content
+main {
+  padding-top: 100px; // Adjust this value as needed
+}
+
 .wrapper {
   max-width: -webkit-calc(800px - (#{var.$horizontal-spacing-unit} * 2));
   max-width: calc(800px - (#{var.$horizontal-spacing-unit} * 2));

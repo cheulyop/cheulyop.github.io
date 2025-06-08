@@ -20,11 +20,12 @@
     {% endif %}
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="wrapper">
             <nav class="site-nav">
                 {# Basic Navigation Example - Adapt as needed #}
                 <a class="page-link" href="{{ '/' | url }}">Home</a>
+                <a class="page-link" href="{{ '/blog/' | url }}">Blog</a>
                 {# Add other links, potentially from data or collections later #}
             </nav>
             <h1 class="site-title"><a href="{{ '/' | url }}">{{ site.name }}</a></h1>
