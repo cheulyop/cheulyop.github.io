@@ -4,7 +4,11 @@ title: Blog
 permalink: /blog/
 ---
 
+<div class="blog-page">
+
 # Blog
+
+{% if collections.posts.length > 0 %}
 
 <ul class="post-list">
 {% for post in collections.posts %}
@@ -14,3 +18,10 @@ permalink: /blog/
   </li>
 {% endfor %}
 </ul>
+{% else %}
+<div class="no-posts">
+  <p>No posts yet!</p>
+</div>
+{% endif %}
+
+</div>

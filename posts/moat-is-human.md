@@ -2,6 +2,7 @@
 layout: post.njk
 title: "The Moat is Human, Not Tech"
 date: 2025-04-17
+draft: true
 ---
 
 OpenAI가 AI 씬의 선두로서 원하는 것은 명확하다. 먼저 privacy를 크게 신경 쓰지 않는 일반인들을 대상으로 개인화 서비스를 제공한다. 최근 Memory 기능 업데이트를 한 것도 그 맥락이다. 다음으로는 나와 AI의 대화 기록을 담보로 사용자를 사로잡고, 이어서 network를 moat로 삼는다.
