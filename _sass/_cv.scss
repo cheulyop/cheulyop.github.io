@@ -1,0 +1,33 @@
+// CV page styling
+
+.cv-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+
+  iframe {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .cv-container iframe {
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-container {
+    margin: 1rem 0;
+
+    iframe {
+      min-height: 500px;
+    }
+  }
+}
