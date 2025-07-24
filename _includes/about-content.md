@@ -1,18 +1,28 @@
 I am a Software Engineer on the **[Upstage](https://www.upstage.ai/)** Data Team.
 
-I'm interested in two questions:
+Topics of my interests are: `AI`, `Data`, and `Agents`
 
-1. How can we correctly incentivize data contributors so we can have more "good" data?
-2. How can humans and AI work together to create better data?
+Broadly speaking, I'm interested in these questions:
 
-Towards that, I am building a system that helps people better evaluate and guide LLMs.
+1. How can humans work with AI to create better data?
+2. How can we correctly incentivize data contributors so we can have more "good" data?
 
-I have also worked on applying RAG to build a chat engine for virtual idols, as well as a system for the automatic evaluation of insurance claims.
+My immediate focus is exploring how we can apply AI agents to solve production-level problems.
+
+Here's a summary of my recent work:
+
+- Building systems that help people better evaluate and guide LLMs. This includes automated qualitative evaluation frameworks, LLM-assisted human feedback collection platforms that reduce data creation difficulty while improving data quality, and agentic tools that bridge the gap between traditional metrics and real-world performance.
+
+I also worked on applying RAG to build a chat backend for virtual K-pop idol [MAVE:](https://en.wikipedia.org/wiki/Mave:), serving thousands of users worldwide, as well as an automated insurance evaluation pipeline for Hanwha Life.
 
 ---
 
-Before joining Upstage, I worked as an AI Researcher at [Silvia Health](https://silvia.io/), where I trained models to detect cognitive impairments from speech on smartphones.
+Before joining Upstage, I was an AI Researcher at [Silvia Health](https://silvia.io/), where I trained models to detect cognitive impairments from speech on smartphones.
 
-Prior to that, I was a Master's student in the [Interactive Computing Lab](https://ic.kaist.ac.kr/) at KAIST. I worked on [AdaptiveESM](https://github.com/cheulyop/AdaptiveESM) — an active learning approach for balanced and efficient collection of emotions in the everyday setting — and the [K-EmoCon Dataset](https://doi.org/10.5281/zenodo.3762961), a multimodal biometric sensor dataset for recognizing emotions in the wild.
+I completed my Master's in the [Interactive Computing Lab](https://ic.kaist.ac.kr/) at KAIST. I studied active learning to leverage scarce emotion data collected in everyday settings for emotion recognition (see [AdaptiveESM](https://github.com/Kaist-ICLab/AdaptiveESM)), and created the [K-EmoCon Dataset](https://doi.org/10.5281/zenodo.3762961), a multimodal biometric sensor dataset for recognizing emotions in the wild.
 
 ---
+
+I've also been dabbling in Web3, occasionally trading and building.
+
+Earlier this year, I built [`alignment-protocol`](https://github.com/alignment-protocol) as a hackathon project—an incentive alignment system for AI data, native to the [Solana network](https://solana.com/).
