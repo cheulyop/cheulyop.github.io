@@ -1,7 +1,5 @@
 I am a Software Engineer on the **[Upstage](https://www.upstage.ai/)** Data Team.
 
-Topics of my interests are: `AI`, `Data`, and `Agents`
-
 Broadly speaking, I'm interested in these questions:
 
 1. How can humans work with AI to create better data?
@@ -26,3 +24,7 @@ I completed my Master's in the [Interactive Computing Lab](https://ic.kaist.ac.k
 I've also been dabbling in Web3, occasionally trading and building.
 
 Earlier this year, I built [`alignment-protocol`](https://github.com/alignment-protocol) as a hackathon project—an incentive alignment system for AI data, native to the [Solana network](https://solana.com/).
+
+---
+
+In my free time, I'm usually at climbing gyms. I've been climbing since 2021. More recently, I've started creating various apps for myself, thanks to vibe coding.
