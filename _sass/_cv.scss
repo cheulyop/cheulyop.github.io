@@ -34,36 +34,3 @@
     }
   }
 }
-
-// Blog page heading styling
-.blog-page h1 {
-  color: var.$theme-color;
-}
-
-// No posts message styling
-.no-posts {
-  text-align: center;
-  padding: 3rem 2rem;
-  margin: 2rem 0;
-
-  p {
-    margin-bottom: 1rem;
-    color: #666;
-    font-size: 1.1rem;
-    line-height: 1.6;
-
-    &:first-child {
-      font-size: 1.2rem;
-      color: #333;
-    }
-  }
-
-  a {
-    color: #0066cc;
-    text-decoration: underline;
-
-    &:hover {
-      color: #004499;
-    }
-  }
-}

@@ -24,14 +24,6 @@ module.exports = function (eleventyConfig) {
   // Add the year shortcode
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-  // Add blog posts collection (excluding drafts)
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi
-      .getFilteredByGlob("posts/*.md")
-      .filter((post) => !post.data.draft) // Exclude draft posts
-      .sort((a, b) => b.date - a.date);
-  });
-
   // Add custom date filter
   eleventyConfig.addFilter("date", (dateObj, format = "LLLL dd, yyyy") => {
     // Ensure dateObj is valid before formatting
