@@ -1,27 +1,29 @@
 {
   "name": "cheulyop.github.io",
+  "type": "module",
   "version": "1.0.0",
-  "main": ".eleventy.js",
+  "description": "Personal website",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cheulyop/cheulyop.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Cheul Young Park",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cheulyop/cheulyop.github.io/issues"
   },
   "homepage": "https://github.com/cheulyop/cheulyop.github.io#readme",
-  "description": "",
+  "dependencies": {
+    "astro": "^5.12.3"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-plugin-rss": "^2.0.3",
-    "luxon": "^3.6.1",
     "sass": "^1.86.3"
   }
 }
