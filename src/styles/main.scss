@@ -182,7 +182,7 @@ header {
 
 .nav-right {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -224,7 +224,6 @@ header {
   position: relative;
   width: 20px;
   height: 20px;
-  transform: translateY(2px); // Move down to align with text baseline
 
   &:hover {
     opacity: 0.7;
