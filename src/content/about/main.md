@@ -27,7 +27,7 @@ Broadly speaking, I'm interested in this question:
 
 > How can we correctly incentivize data creators so we can have more "good" data?
 
-Earlier this year, I built [`alignment-protocol`](https://github.com/alignment-protocol), an incentive alignment system for AI data for [Solana](https://solana.com/) hackathon. You can interact with the protocol at [`ArVxFdoxzCsMDb1K3jXsQTrDP4mbfHMxKiZLjZpznB5c`](https://solana.fm/address/ArVxFdoxzCsMDb1K3jXsQTrDP4mbfHMxKiZLjZpznB5c/transactions?cluster=devnet-alpha) on Solana devnet.
+Earlier this year, I built [`alignment-protocol`](https://github.com/alignment-protocol), an incentive alignment system for AI data for a [Solana](https://solana.com/) hackathon. You can interact with the protocol at [`ArVxFdoxzCsMDb1K3jXsQTrDP4mbfHMxKiZLjZpznB5c`](https://solana.fm/address/ArVxFdoxzCsMDb1K3jXsQTrDP4mbfHMxKiZLjZpznB5c/transactions?cluster=devnet-alpha) on Solana devnet.
 
 ---
 
