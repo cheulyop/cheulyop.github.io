@@ -1,12 +1,16 @@
 ---
 import { siteConfig } from '../config';
+import ThemeSwitcher from './ThemeSwitcher.astro';
 ---
 
 <header>
   <div class="header-container">
     <nav class="site-nav">
       <a href="/" class="site-title">{siteConfig.name}</a>
-      <a href="/cv.pdf" class="cv-link" target="_blank">CV</a>
+      <div class="nav-right">
+        <a href="/cv.pdf" class="cv-link" target="_blank">CV</a>
+        <ThemeSwitcher />
+      </div>
     </nav>
   </div>
 </header>

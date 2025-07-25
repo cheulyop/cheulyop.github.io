@@ -1,5 +1,7 @@
 // Modern, minimal styles for Astro portfolio
 
+// No web font imports needed - using system Helvetica
+
 // CSS Reset
 *,
 *::before,
@@ -9,22 +11,20 @@
   padding: 0;
 }
 
-// Variables
+// Variables for light theme (default)
 :root {
   // Colors
   --color-primary: #0000ee;
-  --color-primary-dark: #0000cc;
+  --color-primary-dark: #551a8b;
   --color-secondary: #764ba2;
-  --color-text: #333;
-  --color-text-light: #666;
+  --color-text: #000000;
+  --color-text-light: #000000;
   --color-bg: #ffffff;
   --color-bg-alt: #f8f9fa;
   --color-border: #e0e0e0;
 
   // Typography
-  --font-sans:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono:
     "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New",
     monospace;
@@ -37,18 +37,34 @@
   --space-xl: 4rem;
 
   // Layout
-  --max-width: 1000px;
+  --max-width: 800px;
   --header-height: 60px;
 }
+
+// Dark theme
+[data-theme="dark"] {
+  --color-primary: #6b8eff;
+  --color-primary-dark: #9b7be4;
+  --color-text: #ffffff;
+  --color-text-light: #ffffff;
+  --color-bg: #000000;
+  --color-bg-alt: #1a1a1a;
+  --color-border: #333333;
+}
+
+// Font is now fixed as Helvetica - removed font themes
 
 // Base styles
 html {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--color-text);
   background: var(--color-bg);
   scroll-behavior: smooth;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
 }
 
 body {
@@ -164,6 +180,12 @@ header {
   justify-content: space-between;
 }
 
+.nav-right {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
 .site-title {
   font-size: 2rem;
   font-weight: 700;
@@ -191,6 +213,40 @@ header {
   }
 }
 
+// Theme Toggle
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-text);
+  transition: opacity 0.2s ease;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: translateY(2px); // Move down to align with text baseline
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+// Show/hide icons based on theme
+[data-theme="light"] .theme-toggle .moon-icon {
+  opacity: 0;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+  opacity: 0;
+}
+
 // About Component
 .about {
   padding: 1rem 2rem 3rem;
@@ -205,10 +261,10 @@ header {
 .about-content {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: #555;
+  color: var(--color-text-light);
 
   strong {
-    color: #333;
+    color: var(--color-text);
     font-weight: 600;
   }
 
@@ -239,7 +295,7 @@ header {
   }
 
   code {
-    background: #f0f0f0;
+    background: var(--color-bg-alt);
     padding: 0.2rem 0.4rem;
     border-radius: 0.25rem;
     font-size: 0.9em;
@@ -262,12 +318,12 @@ header {
   height: 40px;
   border-radius: 50%;
   background: transparent;
-  color: #666;
+  color: var(--color-text-light);
   text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--color-bg-alt);
     transform: translateY(-2px);
   }
 
@@ -308,5 +364,9 @@ header {
 
   .cv-link {
     font-size: 1rem;
+  }
+
+  .theme-panel {
+    right: -1rem;
   }
 }

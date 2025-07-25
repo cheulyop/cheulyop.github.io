@@ -1,6 +1,6 @@
 ---
 title: About Me
-lastUpdated: 2024-12-01
+lastUpdated: 2025-07-25
 ---
 
 I am a Software Engineer on the **[Upstage](https://www.upstage.ai/)** Data Team.
@@ -25,10 +25,12 @@ I've also been dabbling in Web3, occasionally trading and building.
 
 Broadly speaking, I'm interested in this question:
 
-> How can we correctly incentivize data contributors so we can have more "good" data?
+> How can we correctly incentivize data creators so we can have more "good" data?
 
-Earlier this year, I built [`alignment-protocol`](https://github.com/alignment-protocol) as a hackathon project—an incentive alignment system for AI data, native to the [Solana network](https://solana.com/).
+Earlier this year, I built [`alignment-protocol`](https://github.com/alignment-protocol), an incentive alignment system for AI data for [Solana](https://solana.com/) hackathon. You can interact with the protocol at [`ArVxFdoxzCsMDb1K3jXsQTrDP4mbfHMxKiZLjZpznB5c`](https://solana.fm/address/ArVxFdoxzCsMDb1K3jXsQTrDP4mbfHMxKiZLjZpznB5c/transactions?cluster=devnet-alpha) on Solana devnet.
 
 ---
 
-Recently, I'm spending most of my free time vibe-coding various apps for myself. However, I'm usually at climbing gyms when I'm not in front of my laptop.
+Recently, I'm spending most of my free time vibe-coding various apps for myself.
+
+I'm usually at climbing gyms when I'm not in front of my laptop.
