@@ -1,0 +1,16 @@
+---
+import { getEntry } from 'astro:content';
+import SocialLinks from './SocialLinks.astro';
+
+const aboutEntry = await getEntry('about', 'main');
+const { Content } = await aboutEntry.render();
+---
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-content">
+      <Content />
+    </div>
+    <SocialLinks />
+  </div>
+</section>
