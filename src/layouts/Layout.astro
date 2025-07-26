@@ -1,5 +1,6 @@
 ---
 import '../styles/main.scss';
+import { siteConfig } from '../config';
 
 export interface Props {
   title?: string;
@@ -18,6 +19,15 @@ const { title = 'Cheul Young Park', description = 'Personal portfolio and blog' 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
+    <!-- Google Analytics -->
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.googleAnalytics}`}></script>
+    <script is:inline define:vars={{ googleAnalytics: siteConfig.googleAnalytics }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', googleAnalytics);
+    </script>
   </head>
   <body>
     <slot />
