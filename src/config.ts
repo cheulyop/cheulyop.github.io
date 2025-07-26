@@ -15,7 +15,7 @@ export const siteConfig = {
   },
 
   // Analytics
-  googleAnalytics: "UA-163428563-1",
+  googleAnalytics: "G-0HBLGM34YQ",
 
   // Metadata
   lastUpdated: new Date("2025-01-24"),
