@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cheulyop/cheulyop.github.io#readme",
   "dependencies": {
-    "astro": "^5.12.3"
+    "astro": "^5.13.1"
   },
   "devDependencies": {
     "sass": "^1.86.3"
