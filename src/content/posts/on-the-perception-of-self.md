@@ -1,0 +1,77 @@
+---
+title: On the Perception of Self
+description: A thought that I had over a morning walk.
+pubDate: 2025-10-18
+updatedDate: 2025-10-18
+tags:
+  - meditation
+  - personal
+  - consciousness
+defaultLanguage: en
+languages:
+  - code: en
+    label: English
+  - code: ko
+    label: 한국어
+translations:
+  ko: |
+    "나"는 경험이다. 그리고 이 경험은 외부 세계와 독립적으로 발생하지 않는다. 신체의 감각과 의식이 외부 세계와 접촉하여 발생한 자극에 대한 반응이 내면에서 일어남으로써 "나"라는 경험의 사건이 발생한다. 이는 곧 오롯이 독립된 순수한 "나"라는 실체는 없다는 것이다.
+
+    그럼에도 불구하고 우리는 사건들의 흐름을 이어 하나의 주체, "나"라는 이름을 붙이고 내가 아닌 것들과 구분한다. 이는 항상 변화하고 있는 흐름에서 변화하지 않는 고정된 무엇인가를 만들어내는 것과 다르지 않다. 흐르는 물을 보고, "이것은 항상 같은 자리에서 흐르고 있으니 어떤 강이라 부르자" 고 인위적인 이름을 지어내어 붙인 것이다. 실제로 매 순간 물은 한 자리에 고정되어 있지 않고 끊임없이 상류의 물로 대체되며 흘러가고 있는데 말이다.
+
+    자세히 살펴보면, 의식은 매 순간 일어났다 사라지는 감각과 생각의 단면들로 이루어져 있고, 이것들을 연속적인 하나의 통합된 자아로 의식해야만 하는 이유는 없다. 다만 뇌가 이런 단면들을 빠르게 통합하고 보정하여 하나의 연속된 경험으로 만들어내기 때문에 우리는 "지속되는 나"를 느끼는 것이다. 예측과 보정을 통해서 만들어진 하나의 허구적인 이야기를 우리는 실재하는 "나"로 받아들이고 있는 것이다. 다시 말해, 연속성은 존재하는 것이 아니라 구성된다는 것이다.
+
+    이것의 핵심은 뇌의 예측 기능, 인지신경과학에서 말하는 예측처리(predictive processing) 혹은 활동적 추론(active inference)에 있다. 의식은 매 순간 갱신되는 감각 입력과 내적 상태의 스냅샷으로 이루어진다. 뇌는 이 스냅샷들을 빠르게 연결하고 보정하며 하나의 "지속적 주체"로 통합한다. 뇌는 끊임없이 감각 입력을 예측하고, 실제 입력이 예측과 다를 때 생긴 오차를 최소화하는데, 이 예측과 오차의 순환이 초당 수십 번 반복되며 우리는 끊기지 않는 현재의 흐름을 경험하는 것이다. 우리가 경험하는 연속성은 외부 세계에 실재하는 현실이 아닌, 뇌의 예측 메커니즘이 생성한 구성물인 것이다.
+
+    행동도 다르지 않다. 걸음 하나, 손가락의 움직임 하나, 우리는 모든 것의 시작에 우리의 의지, "나"가 있다고 생각하지만, 걷기·말하기·타이핑처럼 반복된 행위는 운동피질, 기저핵, 소뇌의 시스템 속에서 자동화된다. 이 시스템은 예측과 피드백의 루프를 통해 행위를 조정하므로, 의식적인 명령이 없어도 몸은 스스로 움직일 수 있다. 그래서 가끔 걷다가 문득 정신을 차려보면, 의식적인 명령이 없이도 몸이 걷고 있는, "걷는 나"가 사라지고 걸음만 남은 경험을 하는 것이다. 이때 의식은 행위의 원인이 아닌 이미 일어난 과정에 대한 후행적 모델링일 뿐이며, 우리는 무의식적인 신경활동을 나중에 해석하며 "내가 했다"는 인과적 착각을 하는 것이다. 이 착각이 "에이전시의 환상(illusion of agency)"이며 자아의 가장 견고한 형태이다.
+
+    이러한 자아의 구성은 예측모델로서의 자기(self as predictive model)의 개념으로 설명된다. 뇌는 자신의 신체와 환경을 예측하기 위해 자기표상(self-representation)을 만든다. 이것은 감각, 기억, 언어, 사회적 맥락이 통합된 결과물이며, 이 모델이 유지되는 동안 우리는 "나"의 일관된 경험을 한다. 그러나 이것은 실재하는 현실이 아니라 신경적 안정성을 위한 계산적 장치일 뿐이다. 결국 자아는 실재하는 존재가 아닌, 자기예측을 위한 허구적 구조인 것이다.
+
+    의식적인 주의(attention)와 메타인지(metacognition)는 이 구조의 상위 층위를 담당한다. 주의는 감각 정보의 일부를 선택적으로 증폭시켜 예측의 정밀도를 높이고, 메타인지는 자기모델이 생성한 사고와 감정의 상태를 감시하고 조정하는 루프다. 이 두 층위가 결합될 때 우리는 "나는 지금 생각하고 있다", "나는 나를 보고 있다"는 식의 반사적 자기의식을 얻는다. 하지만 이 또한 실체적 "나"가 아닌, 뇌가 자기모델을 대상으로 다시 예측을 수행하는 과정일 뿐이다. 즉, 자아는 뇌의 모델이 자기 자신을 참조하는 자기반사적 시뮬레이션(recursive simulation)인 것이다.
+
+    이렇게 보면 자아의 연속성은 물리적 실체가 아닌 인지적 안정성의 산물이며, 뇌는 끊임없이 변화하는 감각 입력을 효율적으로 처리하기 위해 "지속적 주체"라는 가설을 유지하는 것이다. 이 "나"의 가설은 불연속적인 경험을 하나의 이야기로 묶는 인지적 관성(cognitive inertia)이다. 우리가 "나"라는 말을 쓸 수 있는 것은, 이 모델이 스스로를 신뢰하도록 진화했기 때문이다.
+
+    아낫따(Anattā, 無我)는 이 구조에 대한 통찰이다. 무아는 "나"의 존재를 부정하는 게 아니라, "나"라는 감각이 예측과 모델링의 부산물임을, 불연속적인 사건들을 뇌가 예측과 보정으로 엮고, 자동화된 프로그램들이 배경에서 구동되며 주의가 그 일부를 골라 증폭하는 과정에서 우리는 "연속된 나"를 경험하지만 이것은 실체가 아니라 작동 양식일 뿐임을 아는 것이다. 그러니 무아는 결핍의 선언이 아니라 조건이 맞음으로 발생했다 사라지는 인식의 패턴으로 "나"를 보며, 독립된 나는 사실 존재하지 않음을, 나의 연속된 경험은 외부의 실체와의 관계 속에서만 존재할 수 있음을 보는 시선이다. 때때로 무언가 하는 내가 사라지고 행위만 남았을 때, 그 사라짐은 소실이 아닌 드러남이며, 명료한 관찰이다. 무엇이 붙잡히지 않을 때, 흐름의 작동이 온전히 드러난다. 그렇게 드러난 실제가 우리가 말해온 "나"의 전부인 것이다.
+---
+
+"I" is experience. And this experience does not arise independently of the external world.
+
+The event of "I" occurs as the body’s sensations and consciousness respond inwardly to stimuli that emerge through contact with the external world. This means that there is no purely independent, self-existing "I."
+
+Yet we link the stream of events and name it a single subject -- "I" -- separating it from what is not "I." This is no different from creating a fixed identity within a constant flux. Seeing flowing water, we say, "Since it always flows through this place, let us call it a river." But the water itself never stays still; every moment it is replaced by new water from upstream.
+
+If we look closely, consciousness consists of momentary fragments of sensation and thought that arise and vanish. There is no inherent reason these fragments must be experienced as one continuous, unified self. It is only because the brain rapidly integrates and corrects these fragments into a seamless flow of experience that we feel a "continuing me." The brain’s predictions and corrections produce a coherent narrative, which we then mistake for a real entity -- the "self." In truth, continuity does not exist; it is **constructed**.
+
+At the heart of this construction lies the brain’s predictive mechanism -- what cognitive neuroscience calls **predictive processing** or **active inference**.
+
+Consciousness is composed of ever-updating snapshots of sensory input and internal state. The brain swiftly links and calibrates these snapshots, integrating them into the illusion of a continuous subject. It constantly predicts sensory input, minimizes the errors between prediction and reality, and does so dozens of times per second. Through this cycle of prediction and correction, we experience the world as an unbroken flow of the present.
+
+What we take to be continuity is not an external reality but a **construct generated by the brain’s predictive machinery.**
+
+Action follows the same principle. Every step, every movement of a finger -- we believe it begins with our will, with "I." But actions like walking, speaking, or typing are automatized within the systems of the motor cortex, basal ganglia, and cerebellum. These systems adjust behavior through loops of prediction and feedback, allowing the body to move without conscious command.
+
+Hence, sometimes while walking, we suddenly "come to" and realize the body has been walking by itself -- the "I who walks" has disappeared, leaving only walking itself.
+
+In such moments, consciousness is not the cause of action but a **post hoc model** of what has already occurred. We interpret unconscious neural processes after the fact and create the causal illusion that "I did it." This is the **illusion of agency** -- the most solid form of the self.
+
+This structure of self can be explained through the concept of the **self as a predictive model**.
+To predict its own body and environment, the brain constructs a self-representation -- an integrated product of sensation, memory, language, and social context. While this model is maintained, we experience the continuity of "I."
+
+But this is not a concrete reality; it is a **computational device** for neural stability. The self is not an existent entity, but a **fictional structure** created for the purpose of self-prediction.
+
+**Attention** and **metacognition** constitute higher layers of this structure. Attention selectively amplifies portions of sensory information, increasing the precision of prediction. Metacognition monitors and regulates the thoughts and emotions generated by the self-model. When these two layers interact, we experience reflexive self-awareness: "I am thinking," "I am observing myself."
+
+Yet even this is not an enduring substance, but merely the brain predicting its own model once more -- a **recursive simulation** in which the brain refers back to itself.
+
+Seen in this light, the continuity of self is not a physical reality but a **product of cognitive stability**.
+
+To efficiently process ever-changing sensory input, the brain maintains the hypothesis of a "persistent subject." This hypothesis -- the "I" -- serves as a form of **cognitive inertia** that binds discontinuous experiences into a coherent narrative. We can speak of "I" only because this model has evolved to trust itself.
+
+[Anattā](https://en.wikipedia.org/wiki/Anatt%C4%81) (無我) is insight into this very structure. Non-self does not deny the experience of "I," but reveals that the sense of "I" is a byproduct of prediction and modeling. Through the brain’s constant weaving of discontinuous events via prediction and correction, through automated programs running in the background, and through attention selecting and amplifying portions of that flow, we experience a "continuous self." But this continuity is not substance -- it is a **mode of operation**.
+
+Thus, anatta is not a declaration of lack, but the recognition of a **pattern of cognition** that arises and ceases under certain conditions. It is the seeing of "I" as a conditioned process, not an independent entity.
+
+Our continuous experience exists only in relation to the external world, never apart from it.
+And when the "doer" disappears and only the act remains, that disappearance is not loss but revelation -- a moment of lucid observation.
+
+When nothing is grasped, the flow itself is fully revealed. What is revealed then -- that ungraspable unfolding -- is all that "I" ever was.
