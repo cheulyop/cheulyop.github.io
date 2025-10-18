@@ -1,0 +1,224 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+
+type PostEntry = CollectionEntry<'posts'>;
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props as { post: PostEntry };
+const { Content } = await post.render();
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  tags,
+  heroImage,
+  defaultLanguage = 'en',
+  languages = [],
+  translations = {},
+} = post.data;
+
+const publishedDateLabel = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+const updatedDateLabel =
+  updatedDate && updatedDate.valueOf() !== pubDate.valueOf()
+    ? updatedDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })
+    : null;
+
+const languageMap = new Map(
+  languages.map((lang) => [lang.code, lang])
+);
+
+if (!languageMap.has(defaultLanguage)) {
+  languageMap.set(defaultLanguage, {
+    code: defaultLanguage,
+    label: defaultLanguage.toUpperCase(),
+  });
+}
+
+const languagesWithContent = Array.from(languageMap.values()).filter((lang) => {
+  if (lang.code === defaultLanguage) {
+    return true;
+  }
+
+  const translation = translations[lang.code];
+  return typeof translation === 'string' && translation.trim().length > 0;
+});
+
+const hasMultipleLanguages = languagesWithContent.length > 1;
+
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+const transformInlineMarkdown = (value: string) =>
+  escapeHtml(value)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/`(.+?)`/g, '<code>$1</code>')
+    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+
+const toBasicMarkdownHtml = (markdown: string) => {
+  const blocks = markdown
+    .trim()
+    .split(/\n\s*\n/)
+    .map((block) => block.trim());
+
+  const html = blocks
+    .map((block) => {
+      if (!block) {
+        return '';
+      }
+
+      const transformed = transformInlineMarkdown(block).replace(/\n/g, '<br />');
+      return `<p>${transformed}</p>`;
+    })
+    .filter(Boolean)
+    .join('\n');
+
+  return html;
+};
+
+const compiledTranslationEntries = languagesWithContent
+  .filter((lang) => lang.code !== defaultLanguage)
+  .map((lang) => {
+    const translation = translations[lang.code];
+    if (!translation) {
+      return null;
+    }
+
+    const html = toBasicMarkdownHtml(translation);
+    return [lang.code, html] as const;
+  });
+
+const compiledTranslations = new Map(
+  compiledTranslationEntries.filter(Boolean) as Array<[string, string]>
+);
+---
+
+<Layout title={`${title} | Cheul Young Park`} description={description}>
+  <Header />
+  <main class="post-page">
+    <article class="post">
+      <div class="container">
+        <header class="post-header">
+          <a href="/posts" class="back-link">← Back to posts</a>
+          <h1>{title}</h1>
+          <div class="post-meta">
+            <div class="post-meta-top">
+              <time datetime={pubDate.toISOString()}>{publishedDateLabel}</time>
+              {updatedDateLabel && (
+                <span class="post-updated">Updated {updatedDateLabel}</span>
+              )}
+            </div>
+            {tags.length > 0 && (
+              <ul class="post-tags">
+                {tags.map((tag) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
+            )}
+            {hasMultipleLanguages && (
+              <div
+                class="language-switcher"
+                data-language-switcher
+                data-default-language={defaultLanguage}
+              >
+                {languagesWithContent.map((lang) => (
+                  <button type="button" data-language={lang.code}>
+                    {lang.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+        </header>
+
+        {heroImage && (
+          <figure class="post-hero">
+            <img src={heroImage.src} alt={heroImage.alt} loading="lazy" />
+          </figure>
+        )}
+
+        <div class="post-content">
+          <div class="language-content" data-language-section={defaultLanguage}>
+            <Content />
+          </div>
+          {languagesWithContent
+            .filter((lang) => lang.code !== defaultLanguage)
+            .map((lang) => {
+              const translationHtml = compiledTranslations.get(lang.code);
+
+              if (!translationHtml) {
+                return null;
+              }
+
+              return (
+                <div
+                  class="language-content"
+                  data-language-section={lang.code}
+                  hidden
+                >
+                  <div set:html={translationHtml} />
+                </div>
+              );
+            })}
+        </div>
+
+        {hasMultipleLanguages && (
+          <script is:inline>
+            const switcher = document.querySelector('[data-language-switcher]');
+            if (switcher) {
+              const defaultLanguage = switcher.dataset.defaultLanguage;
+              const buttons = switcher.querySelectorAll('button[data-language]');
+              const sections = document.querySelectorAll('[data-language-section]');
+
+              const setActiveLanguage = (code) => {
+                buttons.forEach((button) => {
+                  button.classList.toggle('active', button.dataset.language === code);
+                });
+
+                sections.forEach((section) => {
+                  section.hidden = section.dataset.languageSection !== code;
+                });
+              };
+
+              buttons.forEach((button) => {
+                button.addEventListener('click', () => {
+                  setActiveLanguage(button.dataset.language);
+                });
+              });
+
+              const initialLanguage = defaultLanguage || buttons[0]?.dataset.language;
+              if (initialLanguage) {
+                setActiveLanguage(initialLanguage);
+              }
+            }
+          </script>
+        )}
+      </div>
+    </article>
+  </main>
+</Layout>

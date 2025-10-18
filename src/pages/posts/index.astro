@@ -1,0 +1,90 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const postsWithLanguages = posts.map((post) => {
+  const defaultLanguage = post.data.defaultLanguage ?? 'en';
+  const languages = post.data.languages ? [...post.data.languages] : [];
+  const translations = post.data.translations ?? {};
+
+  if (!languages.some((lang) => lang.code === defaultLanguage)) {
+    languages.unshift({ code: defaultLanguage, label: defaultLanguage.toUpperCase() });
+  }
+
+  const availableLanguages = languages.filter((lang) => {
+    if (lang.code === defaultLanguage) {
+      return true;
+    }
+
+    const translation = translations[lang.code];
+    return typeof translation === 'string' && translation.trim().length > 0;
+  });
+
+  if (availableLanguages.length === 0) {
+    availableLanguages.push({ code: defaultLanguage, label: defaultLanguage.toUpperCase() });
+  }
+
+  return { post, availableLanguages, defaultLanguage };
+});
+---
+
+<Layout title="Posts | Cheul Young Park" description="Posts, notes, and project updates from Cheul Young Park.">
+  <Header />
+  <main class="posts-page">
+    <section class="posts-hero">
+      <div class="container">
+        <h1>Posts</h1>
+        <p>Thoughts on technology, life, and occasional side quests.</p>
+      </div>
+    </section>
+
+    <section class="posts-list-section">
+      <div class="container">
+        {posts.length === 0 ? (
+          <p class="empty-state">No posts yet. Check back soon!</p>
+        ) : (
+          <ul class="posts-list">
+            {postsWithLanguages.map(({ post, availableLanguages, defaultLanguage }) => (
+              <li class="post-card">
+                <a href={`/posts/${post.slug}/`} class="post-link">
+                  <div class="post-meta">
+                    <div class="post-meta-top">
+                      <time datetime={post.data.pubDate.toISOString()}>
+                        {post.data.pubDate.toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric',
+                        })}
+                      </time>
+                      {availableLanguages.length > 0 && (
+                        <ul class="post-languages post-languages--card" aria-label="Available languages">
+                          {availableLanguages.map((lang) => (
+                            <li title={lang.label}>{lang.code.toUpperCase()}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                    {post.data.tags.length > 0 && (
+                      <ul class="post-tags">
+                        {post.data.tags.map((tag) => (
+                          <li>{tag}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  <h2>{post.data.title}</h2>
+                  <p>{post.data.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </section>
+  </main>
+</Layout>

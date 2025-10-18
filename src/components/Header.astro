@@ -7,9 +7,15 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
   <div class="header-container">
     <nav class="site-nav">
       <a href="/" class="site-title">{siteConfig.name}</a>
-      <div class="nav-right">
-        <a href="/cv.pdf" class="cv-link" target="_blank">CV</a>
-        <ThemeSwitcher />
+      <div class="nav-group">
+        <div class="nav-links">
+          <a href="/#about" class="nav-link">About</a>
+          <a href="/posts" class="nav-link">Posts</a>
+        </div>
+        <div class="nav-right">
+          <a href="/cv.pdf" class="cv-link" target="_blank">CV</a>
+          <ThemeSwitcher />
+        </div>
       </div>
     </nav>
   </div>
