@@ -7,6 +7,7 @@ tags:
   - meditation
   - personal
   - consciousness
+draft: true
 defaultLanguage: en
 languages:
   - code: en
