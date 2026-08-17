@@ -3,6 +3,9 @@
   "type": "module",
   "version": "1.0.0",
   "description": "Personal website",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -21,9 +24,9 @@
   },
   "homepage": "https://github.com/cheulyop/cheulyop.github.io#readme",
   "dependencies": {
-    "astro": "^5.14.5"
+    "astro": "^7.2.2"
   },
   "devDependencies": {
-    "sass": "^1.86.3"
+    "sass": "^1.102.0"
   }
 }
