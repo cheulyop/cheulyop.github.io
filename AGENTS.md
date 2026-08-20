@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-The site is built with Astro. Page routes live in `src/pages`, reusable UI pieces in `src/components`, and shared shells in `src/layouts`. Long-form content (e.g., biography sections) resides in `src/content` with schema defined through `src/content/config.ts`. Global Sass lives in `src/styles`, while static assets such as favicons and PDFs belong in `public`. Build artifacts are emitted to `dist`; avoid editing that folder directly. Global site behavior is configured through `astro.config.mjs` and `src/config.ts`.
+The site is built with Astro. Page routes live in `src/pages`, reusable UI pieces in `src/components`, and shared shells in `src/layouts`. Long-form content (e.g., biography sections) resides in `src/content` with schema defined through `src/content.config.ts`. Global Sass lives in `src/styles`, while static assets such as favicons and PDFs belong in `public`. Build artifacts are emitted to `dist`; avoid editing that folder directly. Global site behavior is configured through `astro.config.mjs` and `src/config.ts`.
 
 ## Build, Test, and Development Commands
 
@@ -19,3 +19,14 @@ Automated testing is light today, so rely on Astro’s static analysis via `npm 
 ## Commit & Pull Request Guidelines
 
 Follow the existing Conventional Commits style (`feat(layout):`, `fix(header):`) with imperative summaries under 65 characters. Group related changes together and reference GitHub issues when applicable. Pull requests should include a concise description of what changed, why it matters, verification steps (commands run or screenshots), and any follow-up tasks noted in a checklist.
+
+## Automatic Production Publishing
+
+- After verifying an in-scope change, Codex must stage only the scoped files.
+- Codex must create a Conventional Commit on `main` and push `main` to `origin`.
+- Treat the implementation request as approval for the commit, push, and GitHub Pages deployment. Do not request separate approval.
+- Run `npm run build` before pushing.
+- After pushing, wait for `.github/workflows/deploy.yml` to finish.
+- Verify the changed behavior at `https://cheul.dev/`.
+- Stop and report when the worktree has unrelated changes or `main` diverges from `origin/main`.
+- Also stop when verification or deployment fails.
